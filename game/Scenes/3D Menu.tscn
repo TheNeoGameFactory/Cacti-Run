@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Fonts/Title Font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Scripts/Title/Title-Anim.gd" type="Script" id=2]
+[ext_resource path="res://Music/Mega Hyper Ultrastorm.ogg" type="AudioStream" id=3]
 
 [sub_resource type="SpatialMaterial" id=4]
 
@@ -63,4 +64,9 @@ draw_pass_1 = SubResource( 3 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.16934 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.0
+autoplay = true
 
