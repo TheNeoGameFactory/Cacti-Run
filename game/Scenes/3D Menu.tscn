@@ -1,0 +1,66 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Fonts/Title Font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/Title/Title-Anim.gd" type="Script" id=2]
+
+[sub_resource type="SpatialMaterial" id=4]
+
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=5]
+
+colors = PoolColorArray( 0.779297, 0.11329, 0.11329, 1, 0.301784, 0.31217, 0.681641, 1 )
+
+[sub_resource type="GradientTexture" id=6]
+
+gradient = SubResource( 5 )
+
+[sub_resource type="ParticlesMaterial" id=1]
+
+emission_shape = 1
+emission_sphere_radius = 1.0
+gravity = Vector3( 0, 0, 0 )
+angular_velocity = 50.0
+angular_velocity_random = 1.0
+radial_accel = 2.0
+radial_accel_random = 1.0
+scale = 0.1
+scale_random = 0.5
+color_ramp = SubResource( 6 )
+
+[sub_resource type="PlaneMesh" id=3]
+
+
+[node name="3D Menu" type="Spatial"]
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -338.0
+margin_top = 20.0
+margin_right = 338.0
+margin_bottom = 207.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.0392157, 0.352941, 0.392157, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Cacti Run"
+align = 1
+percent_visible = 0.0
+script = ExtResource( 2 )
+showCharSpeed = 0.85
+
+[node name="Particles" type="Particles" parent="."]
+material_override = SubResource( 4 )
+process_material = SubResource( 1 )
+draw_pass_1 = SubResource( 3 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.16934 )
+
