@@ -1,13 +1,12 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/Load Level.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Level.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Fonts/Title Font.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Scripts/Title/Title-Anim.gd" type="Script" id=4]
-[ext_resource path="res://Music/Mega Hyper Ultrastorm.ogg" type="AudioStream" id=5]
-[ext_resource path="res://Fonts/Pause Font.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Fonts/Pause Font.tres" type="DynamicFont" id=5]
 
-[sub_resource type="SpatialMaterial" id=4]
+[sub_resource type="SpatialMaterial" id=1]
 
 flags_unshaded = true
 vertex_color_use_as_albedo = true
@@ -17,15 +16,15 @@ particles_anim_h_frames = 1
 particles_anim_v_frames = 1
 particles_anim_loop = false
 
-[sub_resource type="Gradient" id=5]
+[sub_resource type="Gradient" id=2]
 
 colors = PoolColorArray( 0.779297, 0.11329, 0.11329, 1, 0.301784, 0.31217, 0.681641, 1 )
 
-[sub_resource type="GradientTexture" id=6]
+[sub_resource type="GradientTexture" id=3]
 
-gradient = SubResource( 5 )
+gradient = SubResource( 2 )
 
-[sub_resource type="ParticlesMaterial" id=1]
+[sub_resource type="ParticlesMaterial" id=4]
 
 emission_shape = 1
 emission_sphere_radius = 1.0
@@ -36,9 +35,9 @@ radial_accel = 2.0
 radial_accel_random = 1.0
 scale = 0.1
 scale_random = 0.5
-color_ramp = SubResource( 6 )
+color_ramp = SubResource( 3 )
 
-[sub_resource type="PlaneMesh" id=3]
+[sub_resource type="PlaneMesh" id=5]
 
 
 [node name="3D Menu" type="Spatial"]
@@ -63,17 +62,12 @@ script = ExtResource( 4 )
 showCharSpeed = 0.85
 
 [node name="Particles" type="Particles" parent="."]
-material_override = SubResource( 4 )
-process_material = SubResource( 1 )
-draw_pass_1 = SubResource( 3 )
+material_override = SubResource( 1 )
+process_material = SubResource( 4 )
+draw_pass_1 = SubResource( 5 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.16934 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
-volume_db = -10.0
-autoplay = true
 
 [node name="Play" type="Button" parent="."]
 anchor_left = 0.5
@@ -84,6 +78,6 @@ margin_left = -132.0
 margin_top = -708.0
 margin_right = 132.0
 margin_bottom = -630.0
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 5 )
 text = "Start Game"
 
