@@ -16,5 +16,5 @@ func _exit():
 	get_tree().quit()
 
 func _continue():
-	get_node("/root/Level")._togglePause()
+	get_node("/root/LevelRoot")._togglePause()
 	

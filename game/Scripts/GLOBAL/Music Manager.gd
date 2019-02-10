@@ -19,7 +19,7 @@ func _checkScene():
 	var testCurrentScene = get_tree().current_scene.name
 	if testCurrentScene == "3D Menu":
 		self.volume_db = -10
-	elif testCurrentScene == "Level":
+	elif testCurrentScene == "LevelRoot":
 		self.volume_db = -5
 	
 	currentScene = testCurrentScene
