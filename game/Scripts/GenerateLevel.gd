@@ -43,6 +43,7 @@ func _ready():
 	
 	
 	
+	
 func _process(delta):
 	
 	_renewBlocks()
@@ -83,10 +84,12 @@ func _instantiatePlayer():
 	
 
 func _renewBlocks():
-	if field[0].translation.z - 2 > get_node("/root/LevelRoot/Camera").translation.z:
-		var block = walkableArea[0].instance()
+	randomize()
+	if field[0].translation.z - blockOffsetLenght > get_node("/root/LevelRoot/Camera").translation.z:
+		var rand = randi() % walkableArea.size()
+		var block = walkableArea[rand].instance()
 		fieldRootNode.add_child(block)
-		block.translation = Vector3(0,0,field[field.size()-1].translation.z-blockOffsetLenght+0.1)
+		block.translation = Vector3(0,0,field[field.size()-1].translation.z-blockOffsetLenght+0.5)
 		field.push_back(block)
 		field[0].queue_free()
 		field.pop_front()
@@ -95,8 +98,10 @@ func _renewBlocks():
 
 	
 func _generateField():
+	randomize()
 	for lenght in fieldLength:
-		var block = walkableArea[0].instance()
+		var rand = randi() % walkableArea.size()
+		var block = walkableArea[rand].instance()
 		fieldRootNode.add_child(block)
 		block.translation = Vector3(0,0,-lenght*blockOffsetLenght)
 		field.push_back(block)

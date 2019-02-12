@@ -1,6 +1,7 @@
 extends Spatial
 
 export (float) var playerSpeed = 2
+export (float) var followSpeed = 3
 
 
 var playerRootNode
@@ -24,4 +25,8 @@ func _process(delta):
 		
 	
 	var distance = (playerRootNode.translation - self.translation)/1.25
-	get_node("/root/LevelRoot/Camera").look_at(self.translation+Vector3(distance.x,2,0),Vector3.UP)
+	var camera = get_node("/root/LevelRoot/Camera")
+	camera.look_at(self.translation+Vector3(0,3,0),Vector3.UP)
+#	camera.translation = camera.translation.linear_interpolate(self.translation+Vector3(0,3,3) ,delta*followSpeed)
+	camera.translation = self.translation+Vector3(0,2,3)+Vector3(distance.x/3,2,0)
+	

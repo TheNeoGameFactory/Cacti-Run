@@ -22,7 +22,8 @@ points = PoolVector3Array( -1.32054, 0, 0.486979, -1.70879, 0, 0.386481, -1.6017
 
 [node name="Player" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-playerSpeed = 2.5
+playerSpeed = 4.0
+followSpeed = 3.5
 
 [node name="Cylinder" parent="." index="0"]
 material_override = SubResource( 1 )

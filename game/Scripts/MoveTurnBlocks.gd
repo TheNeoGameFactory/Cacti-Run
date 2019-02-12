@@ -1,6 +1,6 @@
 extends Spatial
 
-var movingSpeed = 6
+var movingSpeed = 20
 
 func _process(delta):
 	self.translate(Vector3(0,0,movingSpeed*delta))
