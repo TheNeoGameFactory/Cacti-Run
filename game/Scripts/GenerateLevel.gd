@@ -14,7 +14,7 @@ export (int) var blockOffsetLenght = 2
 #export (int) var blockOffsetWidth = 2
 
 
-export (Array) var walkableArea = []
+export (Array) var walkableArea
 export (PackedScene) var playerScene
 #export (PackedScene) var environmentArea=[]
 
@@ -89,7 +89,7 @@ func _renewBlocks():
 		var rand = randi() % walkableArea.size()
 		var block = walkableArea[rand].instance()
 		fieldRootNode.add_child(block)
-		block.translation = Vector3(0,0,field[field.size()-1].translation.z-blockOffsetLenght+0.5)
+		block.translation = Vector3(0,0,field[field.size()-1].translation.z-blockOffsetLenght+0.35)
 		field.push_back(block)
 		field[0].queue_free()
 		field.pop_front()
