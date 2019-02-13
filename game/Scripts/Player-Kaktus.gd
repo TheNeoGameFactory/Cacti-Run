@@ -12,7 +12,7 @@ func _ready():
 	cameraNode = get_node("/root/LevelRoot/Camera")
 	pass
 
-func _process(delta):
+func _physics_process(delta):
 	
 	if Input.is_action_pressed("Move_Left"):
 		self.translate(Vector3(-playerSpeed*delta,0,0))
@@ -30,3 +30,13 @@ func _process(delta):
 #	camera.translation = camera.translation.linear_interpolate(self.translation+Vector3(0,3,3) ,delta*followSpeed)
 	camera.translation = self.translation+Vector3(0,2,3)+Vector3(distance.x/3,2,0)
 	
+
+
+
+
+
+
+
+func _on_Area_body_entered(body):
+	if(body.is_in_group("enemy")):
+		print("GEGNER")

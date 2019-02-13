@@ -4,7 +4,7 @@
 [ext_resource path="res://Models/LevelBlock/Boden.material" type="Material" id=2]
 [ext_resource path="res://Models/Steine/Felsen.material" type="Material" id=3]
 
-[node name="Block_50" index="0" instance=ExtResource( 1 )]
+[node name="Block_50" instance=ExtResource( 1 )]
 
 [node name="Block_50" parent="." index="0"]
 material/0 = ExtResource( 2 )

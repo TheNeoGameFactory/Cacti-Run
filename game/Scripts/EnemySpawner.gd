@@ -7,7 +7,7 @@ export (Array) var enemys
 
 func _ready():
 	randomize()
-	var rand = randi() % 11
+	var rand = randi() % 8
 	if rand == 3 or rand == 7:
 		_spawnEnemy()
 	pass

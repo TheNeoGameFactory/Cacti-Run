@@ -10,7 +10,6 @@ extends Spatial
 #export (int) var fieldWidth = 5
 export (int) var fieldLength = 10
 
-export (int) var blockOffsetLenght = 2
 #export (int) var blockOffsetWidth = 2
 
 
@@ -85,11 +84,12 @@ func _instantiatePlayer():
 
 func _renewBlocks():
 	randomize()
-	if field[0].translation.z - blockOffsetLenght > get_node("/root/LevelRoot/Camera").translation.z:
+	var lvlBlock = field[0]
+	if lvlBlock.translation.z - lvlBlock._getBlockOffset() > get_node("/root/LevelRoot/Camera").translation.z:
 		var rand = randi() % walkableArea.size()
 		var block = walkableArea[rand].instance()
 		fieldRootNode.add_child(block)
-		block.translation = Vector3(0,0,field[field.size()-1].translation.z-blockOffsetLenght+0.35)
+		block.translation = Vector3(0,0,field[field.size()-1].translation.z-field[field.size()-1]._getBlockOffset()+0.35)
 		field.push_back(block)
 		field[0].queue_free()
 		field.pop_front()
@@ -103,7 +103,11 @@ func _generateField():
 		var rand = randi() % walkableArea.size()
 		var block = walkableArea[rand].instance()
 		fieldRootNode.add_child(block)
-		block.translation = Vector3(0,0,-lenght*blockOffsetLenght)
+		if(field.size()==0):
+			block.translation = Vector3(0,0,0)
+			print(lenght)
+		else:
+			block.translation = Vector3(0,0,field[field.size()-1].translation.z-field[field.size()-1]._getBlockOffset())
 		field.push_back(block)
 		
 	

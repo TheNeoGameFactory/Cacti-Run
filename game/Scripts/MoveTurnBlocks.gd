@@ -1,8 +1,9 @@
 extends Spatial
 
 var movingSpeed = 20
+export (int) var blockOffset
 
-func _process(delta):
+func _physics_process(delta):
 	self.translate(Vector3(0,0,movingSpeed*delta))
 	
 
@@ -10,3 +11,7 @@ func _process(delta):
 #	if self.translation.z-2 > get_node("/root/LevelRoot/Camera").translation.z:
 #		queue_free()
 	pass
+	
+	
+func _getBlockOffset():
+	return blockOffset
