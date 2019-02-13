@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/MoveTurnBlocks.gd" type="Script" id=1]
+[ext_resource path="res://Models/LevelBlock/Block_100.gltf" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Steine/Cliff_001.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Steine/Cliff_003.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Steine/Cliff_002.tscn" type="PackedScene" id=5]
+
+[node name="StartLevel" type="Spatial"]
+editor/display_folded = true
+script = ExtResource( 1 )
+blockOffset = 100
+
+[node name="Scene Root" parent="." instance=ExtResource( 2 )]
+
+[node name="Cliff_001" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.897272, 0, 0.441477, 0, 1, 0, -0.441477, 0, -0.897272, -6.28582, 0, -3.22669 )
+
+[node name="Cliff_008" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.897272, 0, 0.441477, 0, 1, 0, -0.441477, 0, -0.897272, -8.36134, 0, -24.6755 )
+
+[node name="Cliff_005" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.749631, 0, 0.661856, 0, 1, 0, -0.661856, 0, -0.749631, 7.05315, 0, -26.588 )
+
+[node name="Cliff_010" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.37292, 0, 0.927864, 0, 1, 0, -0.927864, 0, -0.37292, -7.97368, 0, -43.4987 )
+
+[node name="Cliff_016" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.946221, 0, 0.323522, 0, 1, 0, -0.323522, 0, -0.946221, -13.5651, 0, -60.158 )
+
+[node name="Cliff_013" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.84984, 0, -0.527041, 0, 1, 0, 0.527041, 0, -0.84984, 6.06735, 0, -87.4213 )
+
+[node name="Cliff_014" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.999634, 0, 0.0270433, 0, 1, 0, -0.0270433, 0, -0.999634, 6.06735, 0, -95.0269 )
+
+[node name="Cliff_002" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.991177, 0, -0.132546, 0, 1, 0, 0.132546, 0, -0.991177, 7.35585, 0, -19.3029 )
+
+[node name="Cliff_003" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.15061, 0, -0.988593, 0, 1, 0, 0.988593, 0, -0.15061, 6.00521, 0, -8.27186 )
+
+[node name="Cliff_007" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.15061, 0, -0.988593, 0, 1, 0, 0.988593, 0, -0.15061, 8.46557, 0, -51.5987 )
+
+[node name="Cliff_011" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.0308433, 0, -0.999524, 0, 1, 0, 0.999524, 0, 0.0308433, 7.20128, 0, -79.4924 )
+
+[node name="Cliff_017" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.196405, 0, -0.980523, 0, 1, 0, 0.980523, 0, -0.196405, -13.0454, 0, -84.043 )
+
+[node name="Cliff_019" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.563315, 0, -0.826242, 0, 1, 0, 0.826242, 0, -0.563315, -9.22052, 0, -93.2922 )
+
+[node name="Cliff_004" parent="." instance=ExtResource( 5 )]
+transform = Transform( -0.271894, 0, 0.962327, 0, 1, 0, -0.962327, 0, -0.271894, -8.12419, 0, -14.1998 )
+
+[node name="Cliff_009" parent="." instance=ExtResource( 5 )]
+transform = Transform( -0.271894, 0, 0.962327, 0, 1, 0, -0.962327, 0, -0.271894, -10.1997, 0, -35.6487 )
+
+[node name="Cliff_015" parent="." instance=ExtResource( 5 )]
+transform = Transform( -0.526507, 0, 0.850171, 0, 1, 0, -0.850171, 0, -0.526507, -11.2442, 0, -51.9985 )
+
+[node name="Cliff_006" parent="." instance=ExtResource( 5 )]
+transform = Transform( -0.00931281, 0, 0.999957, 0, 1, 0, -0.999957, 0, -0.00931281, 8.16452, 0, -37.6584 )
+
+[node name="Cliff_012" parent="." instance=ExtResource( 5 )]
+transform = Transform( -0.190181, 0, 0.981749, 0, 1, 0, -0.981749, 0, -0.190181, 9.42881, 0, -65.7279 )
+
+[node name="Cliff_018" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.0371836, 0, 0.999309, 0, 1, 0, -0.999309, 0, 0.0371836, -13.9942, 0, -70.1318 )
+

@@ -1,12 +1,15 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/GenerateLevel.gd" type="Script" id=2]
-[ext_resource path="res://Scenes/Level Blocks Scenes/Level_Block_01.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Level Blocks Scenes/StartLevel.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Level Blocks Scenes/Level_Block_02.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Level Blocks Scenes/Block_50_01.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Player/Player-Kaktus.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Global Light.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Level Blocks Scenes/Level_Block_01.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Player/Player-Kaktus.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Global Light.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Menu Scenes/PlayMenu.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scripts/DistanceScript.gd" type="Script" id=10]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -38,8 +41,8 @@ script = ExtResource( 1 )
 pause_mode = 1
 script = ExtResource( 2 )
 fieldLength = 3
-walkableArea = [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ]
-playerScene = ExtResource( 6 )
+walkableArea = [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ]
+playerScene = ExtResource( 7 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.958015, 0.286718, 0, -0.286718, 0.958015, -0.00920916, 3.7855, 2.77412 )
@@ -48,5 +51,8 @@ far = 200.0
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 2 )
 
-[node name="Spatial" parent="." instance=ExtResource( 7 )]
+[node name="Spatial" parent="." instance=ExtResource( 8 )]
+
+[node name="PlayMenu" parent="." instance=ExtResource( 9 )]
+script = ExtResource( 10 )
 

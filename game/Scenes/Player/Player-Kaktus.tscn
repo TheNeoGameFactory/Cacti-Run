@@ -22,7 +22,7 @@ extents = Vector3( 0.5554, 0.880617, 0.319356 )
 
 [node name="Player" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-playerSpeed = 4.0
+playerSpeed = 5.0
 followSpeed = 3.5
 
 [node name="Cylinder" parent="." index="0"]

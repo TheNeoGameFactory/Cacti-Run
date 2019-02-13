@@ -9,9 +9,9 @@ extends Spatial
 
 #export (int) var fieldWidth = 5
 export (int) var fieldLength = 10
+export (float) var fieldSpeedMultiplier = 1
 
 #export (int) var blockOffsetWidth = 2
-
 
 export (Array) var walkableArea
 export (PackedScene) var playerScene
@@ -81,12 +81,17 @@ func _instantiatePlayer():
 #
 #	return array
 	
+	
+
+func _getSpeedMultiplier():
+	return fieldSpeedMultiplier
 
 func _renewBlocks():
 	randomize()
 	var lvlBlock = field[0]
 	if lvlBlock.translation.z - lvlBlock._getBlockOffset() > get_node("/root/LevelRoot/Camera").translation.z:
-		var rand = randi() % walkableArea.size()
+		var maxValue = walkableArea.size()-1
+		var rand = randi() % maxValue + 1
 		var block = walkableArea[rand].instance()
 		fieldRootNode.add_child(block)
 		block.translation = Vector3(0,0,field[field.size()-1].translation.z-field[field.size()-1]._getBlockOffset()+0.35)
@@ -97,11 +102,13 @@ func _renewBlocks():
 
 
 	
+
+	
 func _generateField():
 	randomize()
 	for lenght in fieldLength:
 		var rand = randi() % walkableArea.size()
-		var block = walkableArea[rand].instance()
+		var block = walkableArea[lenght].instance()
 		fieldRootNode.add_child(block)
 		if(field.size()==0):
 			block.translation = Vector3(0,0,0)

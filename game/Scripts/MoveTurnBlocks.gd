@@ -2,9 +2,18 @@ extends Spatial
 
 var movingSpeed = 20
 export (int) var blockOffset
+var speedMultiplier
 
+func _ready():
+	speedMultiplier = get_node("/root/LevelRoot/Level")._getSpeedMultiplier()
+	
+	pass
+	
+	
+	
+	
 func _physics_process(delta):
-	self.translate(Vector3(0,0,movingSpeed*delta))
+	self.translate(Vector3(0,0,movingSpeed*delta * speedMultiplier))
 	
 
 #	# Delete this Block after it is behind the camera
