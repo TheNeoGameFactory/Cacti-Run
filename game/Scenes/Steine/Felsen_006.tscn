@@ -3,8 +3,12 @@
 [ext_resource path="res://Models/Steine/Felsen_006.gltf" type="PackedScene" id=1]
 [ext_resource path="res://Models/Steine/Felsen.material" type="Material" id=2]
 
-[node name="Felsen_006" index="0" instance=ExtResource( 1 )]
+[node name="Felsen_006" instance=ExtResource( 1 )]
 
 [node name="Felsen006" parent="." index="0"]
 material/0 = ExtResource( 2 )
+
+[node name="col" parent="Felsen006" index="0" groups=[
+"environment",
+]]
 

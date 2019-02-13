@@ -112,7 +112,6 @@ func _generateField():
 		fieldRootNode.add_child(block)
 		if(field.size()==0):
 			block.translation = Vector3(0,0,0)
-			print(lenght)
 		else:
 			block.translation = Vector3(0,0,field[field.size()-1].translation.z-field[field.size()-1]._getBlockOffset())
 		field.push_back(block)

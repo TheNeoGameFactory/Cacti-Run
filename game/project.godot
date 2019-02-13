@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 GLOBAL="*res://Scripts/GLOBAL/global.gd"
 MusicManager="*res://Scripts/GLOBAL/Music Manager.gd"
+Highscore="*res://Scripts/Highscore.gd"
 
 [display]
 

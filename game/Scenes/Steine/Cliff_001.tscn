@@ -8,3 +8,7 @@
 [node name="Cliff001" parent="." index="0"]
 material/0 = ExtResource( 2 )
 
+[node name="col" parent="Cliff001" index="0" groups=[
+"environment",
+]]
+

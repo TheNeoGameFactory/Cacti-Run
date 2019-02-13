@@ -38,5 +38,6 @@ func _physics_process(delta):
 
 
 func _on_Area_body_entered(body):
-	if(body.is_in_group("enemy")):
-		$"/root/LevelRoot/PlayMenu"._gameOver()
+	if body.is_in_group("enemy") or body.is_in_group("environment"):
+		if body.is_visible_in_tree():	
+			$"/root/LevelRoot/PlayMenu"._gameOver()
