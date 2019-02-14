@@ -1,13 +1,14 @@
 extends Spatial
 
 
-export (PackedScene) var Level
+export (PackedScene) onready var Level
 
 
 
 func _ready():
 	$Play.connect("pressed", self,"_playGame")
 	$Exit.connect("pressed", self,"_exitGame")
+	
 	pass 
 
 

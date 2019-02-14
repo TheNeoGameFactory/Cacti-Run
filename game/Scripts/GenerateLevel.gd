@@ -13,7 +13,7 @@ export (float) var fieldSpeedMultiplier = 1
 
 #export (int) var blockOffsetWidth = 2
 
-export (Array) var walkableArea
+export (Array) onready var walkableArea
 export (PackedScene) var playerScene
 #export (PackedScene) var environmentArea=[]
 

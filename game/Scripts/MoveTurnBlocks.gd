@@ -2,12 +2,9 @@ extends Spatial
 
 var movingSpeed = 20
 export (int) var blockOffset
-var speedMultiplier
+onready var speedMultiplier = get_node("/root/LevelRoot/Level")._getSpeedMultiplier()
 
-func _ready():
-	speedMultiplier = get_node("/root/LevelRoot/Level")._getSpeedMultiplier()
-	
-	pass
+
 	
 	
 	

@@ -2,13 +2,13 @@ extends AudioStreamPlayer
 
 var backgroundMusic = preload("res://Music/Mega Hyper Ultrastorm.ogg")
 
-var currentScene
+onready var currentScene = get_tree().current_scene.name
 
 func _ready():
 	self.stream = backgroundMusic
 	self.play()
 	self.volume_db = -10
-	currentScene = get_tree().current_scene.name
+
 	
 func _process(delta):
 	if get_tree().current_scene.name != currentScene:
