@@ -16,7 +16,7 @@ script = ExtResource( 1 )
 blockOffset = 50
 
 [node name="Felsen_002" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.957602, 0, -2.06752, 0, 1.77597, 0, 1.49568, 0, 1.32372, -3.19077, -0.0633545, -42.2695 )
+transform = Transform( 1.27302, 0, -0.827798, 0, 1.40684, 0, 0.598844, 0, 1.75974, -2.00494, -0.0633545, -41.6083 )
 script = ExtResource( 3 )
 
 [node name="Felsen_003" parent="." instance=ExtResource( 2 )]
@@ -48,10 +48,10 @@ editor/display_folded = true
 transform = Transform( -0.805074, 0, -1.41193, 0, 1.30055, 0, 1.02142, 0, -1.11287, 5.01124, -0.0519099, -42.0676 )
 
 [node name="Felsen_004" parent="Felsen_011" instance=ExtResource( 5 )]
-transform = Transform( 0.744445, 0, 2.98023e-07, 0, 0.744445, 0, -2.98023e-08, 0, 0.744445, 11.9393, -0.166956, -8.04741 )
+transform = Transform( 0.744445, 0, 2.98023e-007, 0, 0.744445, 0, -2.98023e-008, 0, 0.744445, 11.9393, -0.166956, -8.04741 )
 
 [node name="Felsen_005" parent="Felsen_011" instance=ExtResource( 5 )]
-transform = Transform( 0.744445, 0, 4.17233e-07, 0, 0.744445, 0, -5.96046e-08, 0, 0.744445, 25.02, -0.166957, -5.54415 )
+transform = Transform( 0.744445, 0, 4.17233e-007, 0, 0.744445, 0, -5.96046e-008, 0, 0.744445, 25.02, -0.166957, -5.54415 )
 
 [node name="Felsen_006" parent="Felsen_011" instance=ExtResource( 5 )]
 transform = Transform( 0.733064, 0, 0.179259, 0, 0.50734, 0, -0.0938123, 0, 0.733064, 6.22147, -0.166957, -2.41997 )
@@ -60,16 +60,16 @@ transform = Transform( 0.733064, 0, 0.179259, 0, 0.50734, 0, -0.0938123, 0, 0.73
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.257685, -0.0233469, 0.306698 )
 
 [node name="Cliff_001" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.85465, 0, -21.9288 )
+transform = Transform( 0.745246, 0, 0.0728199, 0, 0.832658, 0, -0.0809755, 0, 0.828712, -1.85465, 0, -21.9288 )
 
 [node name="Cliff_009" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.38232, 7.50381, 1.90735e-06, -45.4299 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.38232, 7.50381, 1.90735e-006, -45.4299 )
 
 [node name="Cliff_005" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.254, 0, -18.4002 )
 
 [node name="Cliff_008" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1.12627, 0, -0.722497, 0, 1, 0, 0.722497, 0, 1.12627, -9.39627, 9.53674e-07, -46.6924 )
+transform = Transform( 1.12627, 0, -0.722497, 0, 1, 0, 0.722497, 0, 1.12627, -9.39627, 9.53674e-007, -46.6924 )
 
 [node name="Cliff_006" parent="." instance=ExtResource( 7 )]
 transform = Transform( -0.833647, 0, -0.552298, 0, 1, 0, 0.552298, 0, -0.833647, -13.7499, 0, -24.6629 )
@@ -78,10 +78,10 @@ transform = Transform( -0.833647, 0, -0.552298, 0, 1, 0, 0.552298, 0, -0.833647,
 transform = Transform( 0.364462, 0, -0.931218, 0, 1, 0, 0.931218, 0, 0.364462, -8.1135, 0, -7.18436 )
 
 [node name="Cliff_007" parent="." instance=ExtResource( 8 )]
-transform = Transform( 0.182574, 0, 0.983192, 0, 1, 0, -0.983192, 0, 0.182574, -13.5563, 1.90735e-06, -33.9534 )
+transform = Transform( 0.182574, 0, 0.983192, 0, 1, 0, -0.983192, 0, 0.182574, -13.5563, 1.90735e-006, -33.9534 )
 
 [node name="Cliff_004" parent="." instance=ExtResource( 8 )]
-transform = Transform( 0.0795245, 0, -0.996833, 0, 1, 0, 0.996833, 0, 0.0795245, 5.29705, -9.53674e-07, -33.3732 )
+transform = Transform( 0.0795245, 0, -0.996833, 0, 1, 0, 0.996833, 0, 0.0795245, 5.29705, -9.53674e-007, -33.3732 )
 
 [node name="Cliff_003" parent="." instance=ExtResource( 8 )]
 transform = Transform( -0.29705, 0, -0.954862, 0, 1, 0, 0.954862, 0, -0.29705, 8.33575, 0, -7.26676 )
@@ -90,6 +90,6 @@ transform = Transform( -0.29705, 0, -0.954862, 0, 1, 0, 0.954862, 0, -0.29705, 8
 transform = Transform( 0.680161, 0, 0.445124, 0, 0.792416, 0, -0.425183, 0, 0.886785, -12.2656, 0, 3.35766 )
 
 [node name="Steinbogen_001" parent="." instance=ExtResource( 10 )]
-transform = Transform( 1.12415, 0, 0.107348, 0, 0.778141, 0, -0.121376, 0, 0.994222, 2.51699, -0.209577, -22.1065 )
+transform = Transform( 1.12415, 0, 0.107348, 0, 0.778141, 0, -0.121376, 0, 0.994222, 2.51699, 0.259122, -22.1065 )
 script = ExtResource( 3 )
 
