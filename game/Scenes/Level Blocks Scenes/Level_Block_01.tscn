@@ -30,8 +30,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06483, 0.297293, -25.9501 )
 [node name="Felsen_001" parent="." index="3" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -44.378 )
 script = ExtResource( 6 )
+spawnChance = 50
 
 [node name="Felsen_005" parent="." index="4" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.98356, 0, -62.2558 )
 script = ExtResource( 6 )
+spawnChance = 37
 

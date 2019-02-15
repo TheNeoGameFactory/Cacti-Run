@@ -13,8 +13,16 @@ func _ready():
 
 
 func _process(delta):
+	if distance > 1000:
+		speedMultiplier.fieldSpeedMultiplier = 1.5
+	if distance > 2000:
+		speedMultiplier.fieldSpeedMultiplier = 2
+	if distance > 4000:
+		speedMultiplier.fieldSpeedMultiplier = 3
+		
+		
 	if notCollided:
-		distance += speedMultiplier._getSpeedMultiplier()*20*delta
+		distance += speedMultiplier.fieldSpeedMultiplier*20*delta
 		distanceText.text = String(int(distance))
 	else:
 		$Distance_Pivot.hide()

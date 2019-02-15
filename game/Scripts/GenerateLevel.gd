@@ -9,7 +9,7 @@ extends Spatial
 
 #export (int) var fieldWidth = 5
 export (int) var fieldLength = 10
-export (float) var fieldSpeedMultiplier = 1
+export (float) var fieldSpeedMultiplier = 1 setget _setSpeedMultiplier, _getSpeedMultiplier
 
 #export (int) var blockOffsetWidth = 2
 
@@ -85,6 +85,10 @@ func _instantiatePlayer():
 
 func _getSpeedMultiplier():
 	return fieldSpeedMultiplier
+	
+func _setSpeedMultiplier(newValue):
+	fieldSpeedMultiplier = newValue
+	
 
 func _renewBlocks():
 	randomize()
@@ -94,7 +98,7 @@ func _renewBlocks():
 		var rand = randi() % maxValue + 1
 		var block = walkableArea[rand].instance()
 		fieldRootNode.add_child(block)
-		block.translation = Vector3(0,0,field[field.size()-1].translation.z-field[field.size()-1]._getBlockOffset()+0.35)
+		block.translation = Vector3(0,0,field[field.size()-1].translation.z-field[field.size()-1]._getBlockOffset()+0.4)
 		field.push_back(block)
 		field[0].queue_free()
 		field.pop_front()
@@ -107,13 +111,19 @@ func _renewBlocks():
 func _generateField():
 	randomize()
 	for lenght in fieldLength:
-		var rand = randi() % walkableArea.size()
-		var block = walkableArea[lenght].instance()
+		var maxValue = walkableArea.size()-1
+		var rand = randi() % maxValue + 1
+		var block
+		if lenght == 0:
+			block = walkableArea[0].instance()
+		else:
+			block = walkableArea[rand].instance()
+			
 		fieldRootNode.add_child(block)
 		if(field.size()==0):
 			block.translation = Vector3(0,0,0)
 		else:
-			block.translation = Vector3(0,0,field[field.size()-1].translation.z-field[field.size()-1]._getBlockOffset())
+			block.translation = Vector3(0,0,field[field.size()-1].translation.z-field[field.size()-1]._getBlockOffset()+0.4)
 		field.push_back(block)
 		
 	
