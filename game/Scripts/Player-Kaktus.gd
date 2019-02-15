@@ -1,6 +1,6 @@
 extends Spatial
 
-export (float) var playerSpeed = 2
+export (float) var playerSpeed = 4
 export (float) var followSpeed = 3
 var movement = 0
 var touchscreenPressed = false
