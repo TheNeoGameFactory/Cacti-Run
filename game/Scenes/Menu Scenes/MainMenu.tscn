@@ -9,6 +9,7 @@
 [ext_resource path="res://Scenes/Player/Player-Kaktus.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Enemys/Skorpion.tscn" type="PackedScene" id=8]
 
+
 [sub_resource type="SpatialMaterial" id=1]
 
 flags_unshaded = true
