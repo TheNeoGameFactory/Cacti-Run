@@ -31,7 +31,7 @@ func _physics_process(delta):
 	var camera = get_node("/root/LevelRoot/Camera")
 	camera.look_at(self.translation+Vector3(0,2,0),Vector3.UP)
 #	camera.translation = camera.translation.linear_interpolate(self.translation+Vector3(0,3,3) ,delta*followSpeed)
-	camera.translation = self.translation+Vector3(distance.x/3,3,2)
+	camera.translation = self.translation+Vector3(distance.x/8,3,2)
 	if not touchscreenPressed : movement = 0
 
 
