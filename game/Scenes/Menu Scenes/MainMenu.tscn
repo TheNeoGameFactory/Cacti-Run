@@ -1,10 +1,13 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/Load Level.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/LevelRoot.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Fonts/Title Font.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Scripts/Title/Title-Anim.gd" type="Script" id=4]
 [ext_resource path="res://Fonts/Pause Font.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Scenes/Level Blocks Scenes/Level_Block_02.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Player/Player-Kaktus.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Enemys/Skorpion.tscn" type="PackedScene" id=8]
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -62,6 +65,7 @@ script = ExtResource( 4 )
 showCharSpeed = 0.85
 
 [node name="Particles" type="Particles" parent="."]
+visible = false
 material_override = SubResource( 1 )
 process_material = SubResource( 4 )
 draw_pass_1 = SubResource( 5 )
@@ -92,4 +96,15 @@ margin_right = -80.0
 margin_bottom = -80.0
 custom_fonts/font = ExtResource( 5 )
 text = "Exit"
+
+[node name="Level_Block_02_temp" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.721855, 0, 0.692045, 0, 1, 0, -0.692045, 0, 0.721855, 3.28627, -3.14613, 3.71093 )
+script = null
+
+[node name="Player" parent="." instance=ExtResource( 7 )]
+transform = Transform( -0.914548, 0, 0.404478, 0, 1, 0, -0.404478, 0, -0.914548, 0, -2.9637, -4.01217 )
+script = null
+
+[node name="Skorpion" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.871558, 0, 0.490292, 0, 1, 0, -0.490292, 0, 0.871558, -2.71814, -3.30437, -6.87486 )
 
