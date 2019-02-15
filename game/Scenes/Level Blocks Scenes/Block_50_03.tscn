@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/MoveTurnBlocks.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Level Blocks Scenes/Block_50.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Steine/Cliff_002.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Steine/Cliff_001.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Steine/Cliff_003.tscn" type="PackedScene" id=5]
+
+[node name="Block_50_03" type="Spatial"]
+script = ExtResource( 1 )
+blockOffset = 50
+
+[node name="Block_50" parent="." instance=ExtResource( 2 )]
+
+[node name="Cliff_002" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.262199, 0, -0.965014, 0, 1, 0, 0.965014, 0, -0.262199, -3.40921, 0, -7.75397 )
+
+[node name="Cliff_005" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.141736, 0, -0.989904, 0, 1, 0, 0.989904, 0, 0.141736, 11.2477, 0, -19.8884 )
+
+[node name="Cliff_003" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.315721, 0, -0.83721, 0, 1, 0, 0.885276, 0, -0.0905418, 8.38808, 0, -6.7584 )
+
+[node name="Cliff_004" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.193105, 0, -0.761246, 0, 1, 0, 0.919839, 0, 0.360032, -1.26431, -0.851274, -20.2862 )
+
+[node name="Cliff_001" parent="." instance=ExtResource( 4 )]
+transform = Transform( -1.66771, 0, 0.605072, 0, 1.77408, 0, -0.605072, 0, -1.66771, -0.677658, 0, -25.6236 )
+
+[node name="Cliff_006" parent="." instance=ExtResource( 5 )]
+transform = Transform( -0.214374, 0, 0.976752, 0, 1, 0, -0.976752, 0, -0.214374, -3.23133, -1.90735e-006, -41.9328 )
+
+[node name="Cliff_007" parent="." instance=ExtResource( 5 )]
+transform = Transform( -0.0766596, 0, 0.997057, 0, 1, 0, -0.997057, 0, -0.0766596, 12.4894, 0, -31.4977 )
+
+[node name="Cliff_008" parent="." instance=ExtResource( 5 )]
+transform = Transform( -0.407375, 0, 1.00424, 0, 1, 0, -1.02929, 0, -0.26712, 9.53359, 9.53674e-007, -42.7401 )
+
