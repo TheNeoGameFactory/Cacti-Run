@@ -13,12 +13,22 @@ func _ready():
 
 
 func _process(delta):
+	if distance > 500:
+		speedMultiplier.fieldSpeedMultiplier = 0.9
 	if distance > 1000:
-		speedMultiplier.fieldSpeedMultiplier = 1.5
+		speedMultiplier.fieldSpeedMultiplier = 1.0
+	if distance > 1500:
+		speedMultiplier.fieldSpeedMultiplier = 1.2
 	if distance > 2000:
-		speedMultiplier.fieldSpeedMultiplier = 2
+		speedMultiplier.fieldSpeedMultiplier = 1.4
+	if distance > 2500:
+		speedMultiplier.fieldSpeedMultiplier = 1.8
+	if distance > 3000:
+		speedMultiplier.fieldSpeedMultiplier = 2.0
+	if distance > 3500:
+		speedMultiplier.fieldSpeedMultiplier = 2.5
 	if distance > 4000:
-		speedMultiplier.fieldSpeedMultiplier = 3
+		speedMultiplier.fieldSpeedMultiplier = 3.0
 		
 		
 	if notCollided:
