@@ -1,0 +1,93 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/MoveTurnBlocks.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Level Blocks Scenes/Block_50.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Steine/Cliff_002.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Steine/Cliff_001.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Steine/Cliff_003.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Steine/Felsen_002.tscn" type="PackedScene" id=6]
+
+[node name="Block_50_04" type="Spatial"]
+script = ExtResource( 1 )
+blockOffset = 50
+
+[node name="Block_50" parent="." instance=ExtResource( 2 )]
+
+[node name="Cliff_002" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.0377848, 0, -0.999286, 0, 1, 0, 0.999286, 0, 0.0377848, -18.4049, -2.07952, -29.9807 )
+
+[node name="Cliff_005" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.102557, 0, -0.994727, 0, 1, 0, 0.994727, 0, -0.102557, 19.0348, 0, -15.5645 )
+
+[node name="Cliff_003" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.765463, 0, -0.634819, 0, 1, 0, 0.545398, 0, -0.553284, 11.2223, 0, -4.60408 )
+
+[node name="Cliff_004" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.193105, 0, -0.761246, 0, 1, 0, 0.919839, 0, 0.360032, -16.6648, -0.851274, -17.1777 )
+
+[node name="Cliff_001" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1.24831, 0, 1.26059, 0, 1.77408, 0, -1.26059, 0, 1.24831, -12.991, 2.86102e-006, -4.50805 )
+
+[node name="Cliff_006" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.938682, 0, 0.857437, 0, 1, 0, -0.84369, 0, 0.79059, -8.86318, -1.90735e-006, -43.3508 )
+
+[node name="Cliff_007" parent="." instance=ExtResource( 5 )]
+transform = Transform( -0.0766596, 0, 0.997057, 0, 1.38262, 0, -0.997057, 0, -0.0766596, 19.4201, 9.53674e-007, -30.3767 )
+
+[node name="Cliff_008" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1.06085, 0, 1.06253, 0, 1, 0, -0.765305, 0, -0.661906, 11.3472, 9.53674e-007, -44.348 )
+
+[node name="Cliff_009" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.43567, 0, 0.900106, 0, 1, 0, -0.900106, 0, -0.43567, -16.3239, 9.53674e-007, -33.9682 )
+
+[node name="Cliff_010" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.912139, 0, -0.40988, 0, 1, 0, 0.40988, 0, -0.912139, 15.8851, -9.53674e-007, -37.7498 )
+
+[node name="Cliff_011" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.630951, 0, -0.412372, 0, 0.753757, 0, 0.412372, 0, 0.630951, 15.4743, -9.53674e-007, -11.4524 )
+
+[node name="Felsen_002" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, -0.0976868, 0, -7.60529 )
+
+[node name="Felsen_003" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, 4.13638, 0, -11.0749 )
+
+[node name="Felsen_005" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, -5.42337, 0, -11.4911 )
+
+[node name="Felsen_006" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, -10.8155, 0, -18.667 )
+
+[node name="Felsen_009" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, -4.46451, 9.53674e-007, -21.5784 )
+
+[node name="Felsen_018" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, -5.06387, 9.53674e-007, -37.5068 )
+
+[node name="Felsen_010" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, 0.232803, 0, -20.1364 )
+
+[node name="Felsen_013" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, -2.41803, 0, -29.7663 )
+
+[node name="Felsen_016" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, -7.84282, 0, -28.8466 )
+
+[node name="Felsen_014" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, 3.35905, 0, -29.7663 )
+
+[node name="Felsen_015" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, 9.49517, 0, -29.4444 )
+
+[node name="Felsen_019" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, 0.748642, 0, -38.5345 )
+
+[node name="Felsen_011" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, 5.48894, -9.53674e-007, -21.8699 )
+
+[node name="Felsen_017" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, 6.20784, -9.53674e-007, -38.2422 )
+
+[node name="Felsen_012" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, 11.5528, -9.53674e-007, -23.9541 )
+
