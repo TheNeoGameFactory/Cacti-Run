@@ -3,32 +3,23 @@ extends Control
 
 onready var distanceText = $Distance_Pivot/TraveledDistance
 onready var speedMultiplier = $"/root/LevelRoot/Level"
+onready var playerSpeed = $"/root/LevelRoot/Level/PlayerRootNode/Player"
+onready var fasterMenu = $"FASTER Notification"
 var distance = 0
+var lastDistance = 300
 var notCollided = true
 
 func _ready():
 	$Restart_Pivot.hide()
 	$"Distance_Pivot/Highscore".text = String(int(Highscore.highscore))
+	fasterMenu.hide()
+	
 	
 
 
 func _process(delta):
-	if distance > 500:
-		speedMultiplier.fieldSpeedMultiplier = 0.9
-	if distance > 1000:
-		speedMultiplier.fieldSpeedMultiplier = 1.0
-	if distance > 1500:
-		speedMultiplier.fieldSpeedMultiplier = 1.2
-	if distance > 2000:
-		speedMultiplier.fieldSpeedMultiplier = 1.4
-	if distance > 2500:
-		speedMultiplier.fieldSpeedMultiplier = 1.8
-	if distance > 3000:
-		speedMultiplier.fieldSpeedMultiplier = 2.0
-	if distance > 3500:
-		speedMultiplier.fieldSpeedMultiplier = 2.5
-	if distance > 4000:
-		speedMultiplier.fieldSpeedMultiplier = 3.0
+	
+	_getFaster()
 		
 		
 	if notCollided:
@@ -39,6 +30,17 @@ func _process(delta):
 		$Restart_Pivot.show()
 		
 		
+func _getFaster():
+	if distance > lastDistance:
+		fasterMenu.show()
+		$"FASTER Notification/Timer".start()
+		lastDistance+=distance*1.3
+		speedMultiplier.fieldSpeedMultiplier+=0.15
+		playerSpeed.playerSpeed *= speedMultiplier.fieldSpeedMultiplier
+	pass
+	
+	
+	
 func _highscore():
 	$Distance_Pivot/Highscore.text = Highscore.highscore
 	pass
@@ -53,3 +55,6 @@ func _gameOver():
 	get_tree().paused = true
 	$Distance_Pivot.hide()
 	$Restart_Pivot.show()
+
+func _on_Timer_timeout():
+	fasterMenu.hide()

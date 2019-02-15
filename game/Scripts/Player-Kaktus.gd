@@ -1,7 +1,7 @@
 extends Spatial
 
-export (float) var playerSpeed = 4
-export (float) var followSpeed = 3
+export (float) var playerSpeed = 4 setget _setPlayerSpeed, _getPlayerSpeed
+export (float) var followSpeed = 3 
 var movement = 0
 var touchscreenPressed = false
 
@@ -34,6 +34,13 @@ func _physics_process(delta):
 	camera.translation = self.translation+Vector3(distance.x/8,3,2)
 	if not touchscreenPressed : movement = 0
 
+
+func _setPlayerSpeed(newValue):
+	playerSpeed = newValue
+	
+	
+func _getPlayerSpeed():
+	return playerSpeed
 
 func _input(event):
 	if event is InputEventScreenTouch:

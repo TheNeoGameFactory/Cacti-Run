@@ -20,9 +20,9 @@ normal_texture = ExtResource( 5 )
 
 extents = Vector3( 0.413859, 0.934139, 0.202612 )
 
-[node name="Player" index="0" instance=ExtResource( 1 )]
+[node name="Player" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-playerSpeed = 6.0
+playerSpeed = 7.0
 followSpeed = 5.0
 
 [node name="Cylinder" parent="." index="0"]
