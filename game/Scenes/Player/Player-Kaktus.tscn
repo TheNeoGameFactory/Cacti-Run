@@ -19,18 +19,19 @@ normal_texture = ExtResource( 6 )
 
 [sub_resource type="BoxShape" id=2]
 
-extents = Vector3( 0.413859, 0.779106, 0.202612 )
+extents = Vector3( 0.359938, 0.779106, 0.202612 )
 
 [sub_resource type="BoxShape" id=3]
 
-extents = Vector3( 0.43788, 0.144672, 0.131202 )
+extents = Vector3( 0.346966, 0.144672, 0.131202 )
 
-[node name="Player" index="0" instance=ExtResource( 1 )]
+[node name="Player" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 playerSpeed = 7.0
 followSpeed = 5.0
 
 [node name="PlayerKaktus" parent="." index="0" instance=ExtResource( 3 )]
+transform = Transform( 0.820792, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Cylinder" parent="." index="1"]
 visible = false

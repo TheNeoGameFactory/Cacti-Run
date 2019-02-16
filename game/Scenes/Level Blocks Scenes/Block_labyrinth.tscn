@@ -152,7 +152,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90721, 0, -36.2795 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4496, 0, -29.9401 )
 
 [node name="Felsen_013" parent="." instance=ExtResource( 11 )]
-transform = Transform( 0.941284, 0, -0.337616, 0, 1, 0, 0.337616, 0, 0.941284, 5.39467, 0, -80.8853 )
+transform = Transform( 0.941284, 0, -0.337616, 0, 1, 0, 0.337616, 0, 0.941284, 7.82933, 0, -93.7684 )
 
 [node name="Felsen_019" parent="." instance=ExtResource( 11 )]
 transform = Transform( 0.60141, 0, 2.08777, 0, 2.17267, 0, -2.08777, 0, 0.60141, 1.99635, 0, -81.9274 )
