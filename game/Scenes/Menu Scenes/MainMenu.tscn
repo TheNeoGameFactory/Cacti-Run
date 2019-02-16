@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scripts/Load Level.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/LevelRoot.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/Level Blocks Scenes/Level_Block_02.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Player/Player-Kaktus.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Enemys/Skorpion.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Fonts/Righteous-Regular.ttf" type="DynamicFontData" id=9]
 
 [sub_resource type="SpatialMaterial" id=1]
 
@@ -42,6 +43,21 @@ color_ramp = SubResource( 3 )
 
 [sub_resource type="PlaneMesh" id=5]
 
+
+[sub_resource type="DynamicFont" id=6]
+
+size = 40
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=7]
+
+size = 40
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=8]
+
+size = 25
+font_data = ExtResource( 9 )
 
 [node name="3D Menu" type="Spatial"]
 script = ExtResource( 1 )
@@ -119,4 +135,96 @@ script = null
 
 [node name="Skorpion" parent="." instance=ExtResource( 8 )]
 transform = Transform( 0.871558, 0, 0.490292, 0, 1, 0, -0.490292, 0, 0.871558, -2.71814, -3.30437, -6.87486 )
+
+[node name="ControlsLabel" type="Label" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 200.0
+margin_top = -331.0
+margin_right = 359.0
+margin_bottom = -280.0
+custom_fonts/font = SubResource( 6 )
+text = "Controls"
+
+[node name="Controls" type="Container" parent="ControlsLabel"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = 54.0
+margin_right = 146.0
+margin_bottom = 200.0
+
+[node name="ColorRect" type="ColorRect" parent="ControlsLabel/Controls"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.372549 )
+
+[node name="W" type="Label" parent="ControlsLabel/Controls"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_right = 20.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 7 )
+text = "W"
+align = 1
+
+[node name="Jump" type="Label" parent="ControlsLabel/Controls"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -29.5
+margin_top = -40.0
+margin_right = 29.5
+margin_bottom = 11.0
+custom_fonts/font = SubResource( 8 )
+text = "Jump"
+align = 1
+valign = 1
+
+[node name="D" type="Label" parent="ControlsLabel/Controls"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -25.5
+margin_bottom = 25.5
+custom_fonts/font = SubResource( 7 )
+text = "D"
+align = 1
+
+[node name="Right" type="Label" parent="ControlsLabel/Controls"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 5.0
+margin_top = -25.5
+margin_right = 70.0
+margin_bottom = 25.5
+custom_fonts/font = SubResource( 8 )
+text = "Right"
+align = 1
+valign = 1
+
+[node name="A" type="Label" parent="ControlsLabel/Controls"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -25.5
+margin_right = 40.0
+margin_bottom = 25.5
+custom_fonts/font = SubResource( 7 )
+text = "A"
+align = 1
+
+[node name="Left" type="Label" parent="ControlsLabel/Controls"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -70.0
+margin_top = -25.5
+margin_right = -5.0
+margin_bottom = 25.5
+custom_fonts/font = SubResource( 8 )
+text = "Left"
+align = 1
+valign = 1
 
