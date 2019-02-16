@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scripts/MoveTurnBlocks.gd" type="Script" id=1]
 [ext_resource path="res://Models/LevelBlock/Block_100.gltf" type="PackedScene" id=2]
@@ -18,6 +18,8 @@
 [ext_resource path="res://Scenes/Steine/Stein_003.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scenes/Steine/Stein_004.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scripts/TriggerPlayAnimation.gd" type="Script" id=18]
+[ext_resource path="res://Scenes/Teile/Mauer.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Teile/Kaktus.tscn" type="PackedScene" id=20]
 
 [sub_resource type="Animation" id=1]
 
@@ -193,6 +195,9 @@ transform = Transform( 0.858562, 0, -0.512709, 0, 1, 0, 0.512709, 0, 0.858562, 0
 [node name="Steine_004" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1.28694, 0, -1.29729, 0, 1, 0, 0.709932, 0, 0.70427, -4.71479, -0.028492, -27.1851 )
 
+[node name="Steine_010" parent="." instance=ExtResource( 10 )]
+transform = Transform( 0.487224, 0, -1.43677, 0, 1, 0, 1.38666, 0, -0.338599, 1.3209, -0.028492, -34.5429 )
+
 [node name="Steine_005" parent="." instance=ExtResource( 10 )]
 transform = Transform( 0.683102, 0, -1.47068, 0, 1, 0, 1.30138, 0, -0.126729, 7.89522, -0.028492, -36.8094 )
 
@@ -209,7 +214,7 @@ transform = Transform( 1.15585, 0, 0.142193, 0, 1, 0, -0.90787, 0, 1.46926, -4.2
 transform = Transform( 1.46853, 0, -0.846055, 0, 1, 0, 0.0602782, 0, 1.2096, -3.75573, -0.028492, -89.2235 )
 
 [node name="Felsen_017" parent="." instance=ExtResource( 11 )]
-transform = Transform( -0.785659, 0, 0.61866, 0, 1, 0, -0.61866, 0, -0.785659, 1.42964, -0.0240998, -86.2525 )
+transform = Transform( -0.785659, 0, 0.61866, 0, 1, 0, -0.61866, 0, -0.785659, 0.62161, -0.0241, -86.409 )
 
 [node name="Bow" type="Spatial" parent="."]
 editor/display_folded = true
@@ -236,7 +241,6 @@ transform = Transform( -1.48125, 0.33322, 0.132288, 0.3319, 1.48715, -0.0296413,
 transform = Transform( -1.0534, 0.236972, 0.0940774, 0.236033, 1.05759, -0.0210796, -0.0964101, 0, -1.07952, -3.84541, -0.430448, 0.864765 )
 
 [node name="otherObject" type="Spatial" parent="."]
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -41.1776 )
 
 [node name="Cliff_011" parent="otherObject" instance=ExtResource( 3 )]
@@ -249,7 +253,7 @@ transform = Transform( 0.909425, 0, 0.415868, 0, 1, 0, -0.415868, 0, 0.909425, -
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.62164, 0, 1.3502 )
 
 [node name="Felsen_005" parent="otherObject" instance=ExtResource( 14 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.247595, 0, -3.35103 )
+transform = Transform( 0.956634, 0, 0.291293, 0, 1, 0, -0.291293, 0, 0.956634, -1.31474, 0, -3.89809 )
 
 [node name="Felsen_002" parent="otherObject" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.35324, 0, 1.2724 )
@@ -299,6 +303,54 @@ startAnimationName = "loop"
 [node name="CollisionShape" type="CollisionShape" parent="AnimFelsen2/Area"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.54434, 0.546719 )
 shape = SubResource( 2 )
+
+[node name="Mauer" parent="." instance=ExtResource( 19 )]
+transform = Transform( 1.10586, 0, 0.116234, 0, 1.11195, 0, -0.116234, 0, 1.10586, 3.07319, 0, -23.1455 )
+
+[node name="Mauer2" parent="." instance=ExtResource( 19 )]
+transform = Transform( 1.02193, 0, 0.438275, 0, 1.11195, 0, -0.438275, 0, 1.02193, -5.36755, 0, -56.6778 )
+
+[node name="Kaktus" parent="." instance=ExtResource( 20 )]
+transform = Transform( 0.64347, 0, 0.765471, 0, 1, 0, -0.765471, 0, 0.64347, -4.60073, 0, -16.9105 )
+
+[node name="Kaktus2" parent="." instance=ExtResource( 20 )]
+transform = Transform( 0.551874, 0, -0.833927, 0, 1, 0, 0.833927, 0, 0.551874, 8.09509, -2.38419e-007, -30.2958 )
+
+[node name="Kaktus6" parent="." instance=ExtResource( 20 )]
+transform = Transform( -0.0806701, 0, -0.996741, 0, 1, 0, 0.996741, 0, -0.0806701, -11.3634, -2.38419e-007, -56.1171 )
+
+[node name="Kaktus7" parent="." instance=ExtResource( 20 )]
+transform = Transform( -0.390819, 0, -0.920468, 0, 1, 0, 0.920468, 0, -0.390819, -10.5332, -2.38419e-007, -58.5061 )
+
+[node name="Kaktus8" parent="." instance=ExtResource( 20 )]
+transform = Transform( 0.621647, 0, -0.783297, 0, 1, 0, 0.783297, 0, 0.621647, 9.85344, -2.38419e-007, -68.4121 )
+
+[node name="Kaktus12" parent="." instance=ExtResource( 20 )]
+transform = Transform( -0.752294, 0, -0.658828, 0, 1, 0, 0.658828, 0, -0.752294, -7.44873, -2.38419e-007, -83.5006 )
+
+[node name="Kaktus13" parent="." instance=ExtResource( 20 )]
+transform = Transform( -0.312172, 0, -0.950025, 0, 1, 0, 0.950025, 0, -0.312172, -7.59852, -7.15256e-007, -78.3221 )
+
+[node name="Kaktus14" parent="." instance=ExtResource( 20 )]
+transform = Transform( -0.752294, 0, -0.658828, 0, 1, 0, 0.658828, 0, -0.752294, -7.38924, -2.38419e-007, -74.5613 )
+
+[node name="Kaktus11" parent="." instance=ExtResource( 20 )]
+transform = Transform( -0.390819, 0, -0.920468, 0, 1, 0, 0.920468, 0, -0.390819, -9.57537, -2.38419e-007, -62.2183 )
+
+[node name="Kaktus9" parent="." instance=ExtResource( 20 )]
+transform = Transform( -0.390819, 0, -0.920468, 0, 1, 0, 0.920468, 0, -0.390819, -10.1337, -2.38419e-007, -65.2296 )
+
+[node name="Kaktus10" parent="." instance=ExtResource( 20 )]
+transform = Transform( -0.390819, 0, -0.920468, 0, 1, 0, 0.920468, 0, -0.390819, -11.5227, -2.38419e-007, -52.9893 )
+
+[node name="Kaktus5" parent="." instance=ExtResource( 20 )]
+transform = Transform( -0.580346, 0, -0.81437, 0, 1, 0, 0.81437, 0, -0.580346, -7.62486, -2.38419e-007, -32.5479 )
+
+[node name="Kaktus3" parent="." instance=ExtResource( 20 )]
+transform = Transform( 0.761029, 0, 0.0580434, 0, 0.763239, 0, -0.0580434, 0, 0.761029, 8.47304, -2.38419e-007, -28.4167 )
+
+[node name="Kaktus4" parent="." instance=ExtResource( 20 )]
+transform = Transform( -0.151413, 0, -0.74807, 0, 0.763239, 0, 0.74807, 0, -0.151413, 10.0217, -2.38419e-007, -30.4442 )
 
 [connection signal="area_entered" from="AnimFelsen/Area" to="AnimFelsen/Area" method="_on_Area_area_entered"]
 [connection signal="body_entered" from="AnimFelsen/Area" to="AnimFelsen/Area" method="_on_Area_body_entered"]

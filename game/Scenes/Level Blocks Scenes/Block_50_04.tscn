@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/MoveTurnBlocks.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Level Blocks Scenes/Block_50.tscn" type="PackedScene" id=2]
@@ -6,13 +6,14 @@
 [ext_resource path="res://Scenes/Steine/Cliff_001.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Steine/Cliff_003.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Steine/Felsen_002.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Teile/Baum1.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/Teile/Baum2.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Steine/Steine_001.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Teile/Mauer.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/Teile/Zaun.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Steine/Felsen_005.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/Steine/Felsen_006.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scripts/ObjSpawner.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/Teile/Baum1.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Teile/Baum2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Steine/Steine_001.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Teile/Mauer.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Teile/Zaun.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Steine/Felsen_005.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Steine/Felsen_006.tscn" type="PackedScene" id=14]
 
 [node name="Block_50_04" type="Spatial"]
 script = ExtResource( 1 )
@@ -33,25 +34,25 @@ transform = Transform( -0.765463, 0, -0.634819, 0, 1, 0, 0.545398, 0, -0.553284,
 transform = Transform( 0.193105, 0, -0.761246, 0, 1, 0, 0.919839, 0, 0.360032, -16.6648, -0.851274, -17.1777 )
 
 [node name="Cliff_001" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1.24831, 0, 1.26059, 0, 1.77408, 0, -1.26059, 0, 1.24831, -12.991, 2.86102e-06, -4.50805 )
+transform = Transform( 1.24831, 0, 1.26059, 0, 1.77408, 0, -1.26059, 0, 1.24831, -12.991, 2.86102e-006, -4.50805 )
 
 [node name="Cliff_006" parent="." instance=ExtResource( 5 )]
-transform = Transform( 0.938682, 0, 0.857437, 0, 1, 0, -0.84369, 0, 0.79059, -8.86318, -1.90735e-06, -43.3508 )
+transform = Transform( 0.938682, 0, 0.857437, 0, 1, 0, -0.84369, 0, 0.79059, -8.86318, -1.90735e-006, -43.3508 )
 
 [node name="Cliff_007" parent="." instance=ExtResource( 5 )]
-transform = Transform( -0.0766596, 0, 0.997057, 0, 1.38262, 0, -0.997057, 0, -0.0766596, 19.4201, 9.53674e-07, -30.3767 )
+transform = Transform( -0.0766596, 0, 0.997057, 0, 1.38262, 0, -0.997057, 0, -0.0766596, 19.4201, 9.53674e-007, -30.3767 )
 
 [node name="Cliff_008" parent="." instance=ExtResource( 5 )]
-transform = Transform( -1.06085, 0, 1.06253, 0, 1, 0, -0.765305, 0, -0.661906, 11.3472, 9.53674e-07, -44.348 )
+transform = Transform( -1.06085, 0, 1.06253, 0, 1, 0, -0.765305, 0, -0.661906, 11.3472, 9.53674e-007, -44.348 )
 
 [node name="Cliff_009" parent="." instance=ExtResource( 4 )]
-transform = Transform( -0.43567, 0, 0.900106, 0, 1, 0, -0.900106, 0, -0.43567, -16.3239, 9.53674e-07, -33.9682 )
+transform = Transform( -0.43567, 0, 0.900106, 0, 1, 0, -0.900106, 0, -0.43567, -16.3239, 9.53674e-007, -33.9682 )
 
 [node name="Cliff_010" parent="." instance=ExtResource( 4 )]
-transform = Transform( -0.912139, 0, -0.40988, 0, 1, 0, 0.40988, 0, -0.912139, 15.8851, -9.53674e-07, -37.7498 )
+transform = Transform( -0.912139, 0, -0.40988, 0, 1, 0, 0.40988, 0, -0.912139, 15.8851, -9.53674e-007, -37.7498 )
 
 [node name="Cliff_011" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.630951, 0, -0.412372, 0, 0.753757, 0, 0.412372, 0, 0.630951, 15.4743, -9.53674e-07, -11.4524 )
+transform = Transform( 0.630951, 0, -0.412372, 0, 0.753757, 0, 0.412372, 0, 0.630951, 15.4743, -9.53674e-007, -11.4524 )
 
 [node name="Felsen_002" parent="." instance=ExtResource( 6 )]
 transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, -0.0976868, 0, -7.60529 )
@@ -61,21 +62,23 @@ transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, 4
 
 [node name="Felsen_005" parent="." instance=ExtResource( 6 )]
 transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, -5.42337, 0, -11.4911 )
+script = ExtResource( 7 )
 
 [node name="Felsen_006" parent="." instance=ExtResource( 6 )]
 transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, -10.8155, 0, -18.667 )
 
 [node name="Felsen_009" parent="." instance=ExtResource( 6 )]
-transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, -4.46451, 9.53674e-07, -21.5784 )
+transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, -4.46451, 9.53674e-007, -21.5784 )
 
 [node name="Felsen_018" parent="." instance=ExtResource( 6 )]
-transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, -5.06387, 9.53674e-07, -37.5068 )
+transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, -5.06387, 9.53674e-007, -37.5068 )
 
 [node name="Felsen_010" parent="." instance=ExtResource( 6 )]
 transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, 0.232803, 0, -20.1364 )
 
 [node name="Felsen_013" parent="." instance=ExtResource( 6 )]
 transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, -2.41803, 0, -29.7663 )
+script = ExtResource( 7 )
 
 [node name="Felsen_016" parent="." instance=ExtResource( 6 )]
 transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, -7.84282, 0, -28.8466 )
@@ -88,118 +91,121 @@ transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, 9
 
 [node name="Felsen_019" parent="." instance=ExtResource( 6 )]
 transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, 0.748642, 0, -38.5345 )
+script = ExtResource( 7 )
+spawnChance = 70
 
 [node name="Felsen_011" parent="." instance=ExtResource( 6 )]
-transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, 5.48894, -9.53674e-07, -21.8699 )
+transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, 5.48894, -9.53674e-007, -21.8699 )
+script = ExtResource( 7 )
 
 [node name="Felsen_017" parent="." instance=ExtResource( 6 )]
-transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, 6.20784, -9.53674e-07, -38.2422 )
+transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, 6.20784, -9.53674e-007, -38.2422 )
 
 [node name="Felsen_012" parent="." instance=ExtResource( 6 )]
-transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, 11.5528, -9.53674e-07, -23.9541 )
+transform = Transform( 0.952183, 0, -0.305528, 0, 1, 0, 0.305528, 0, 0.952183, 11.5528, -9.53674e-007, -23.9541 )
 
-[node name="Baum1" parent="." instance=ExtResource( 7 )]
+[node name="Baum1" parent="." instance=ExtResource( 8 )]
 transform = Transform( 0.838985, 0, -0.544154, 0, 1, 0, 0.544154, 0, 0.838985, -8.08604, 0, -14.9256 )
 
-[node name="Baum3" parent="." instance=ExtResource( 7 )]
+[node name="Baum3" parent="." instance=ExtResource( 8 )]
 transform = Transform( 0.753985, 0, 0.656892, 0, 1, 0, -0.656892, 0, 0.753985, -8.05875, 0, -34.7182 )
 
-[node name="Baum4" parent="." instance=ExtResource( 7 )]
+[node name="Baum4" parent="." instance=ExtResource( 8 )]
 transform = Transform( 0.904501, 0, -0.426471, 0, 1, 0, 0.426471, 0, 0.904501, 10.7931, 0, -35.5125 )
 
-[node name="Baum11" parent="." instance=ExtResource( 7 )]
+[node name="Baum11" parent="." instance=ExtResource( 8 )]
 transform = Transform( 0.904501, 0, -0.426471, 0, 1, 0, 0.426471, 0, 0.904501, 6.15555, 3.42574, -44.66 )
 
-[node name="Baum2" parent="." instance=ExtResource( 7 )]
+[node name="Baum2" parent="." instance=ExtResource( 8 )]
 transform = Transform( 0.468022, 0, -0.883717, 0, 1, 0, 0.883717, 0, 0.468022, 12.1874, 0, -17.1534 )
 
-[node name="Baum5" parent="." instance=ExtResource( 8 )]
+[node name="Baum5" parent="." instance=ExtResource( 9 )]
 transform = Transform( 0.394121, 0, 0.919059, 0, 1, 0, -0.919059, 0, 0.394121, -11.4809, 0, -13.6796 )
 
-[node name="Baum8" parent="." instance=ExtResource( 8 )]
+[node name="Baum8" parent="." instance=ExtResource( 9 )]
 transform = Transform( 0.807008, 0, 0.590541, 0, 1, 0, -0.590541, 0, 0.807008, 14.7118, 0, -19.6198 )
 
-[node name="Baum9" parent="." instance=ExtResource( 8 )]
+[node name="Baum9" parent="." instance=ExtResource( 9 )]
 transform = Transform( 0.522435, 0, -0.852679, 0, 1, 0, 0.852679, 0, 0.522435, 14.7118, 0, -22.9486 )
 
-[node name="Baum10" parent="." instance=ExtResource( 8 )]
+[node name="Baum10" parent="." instance=ExtResource( 9 )]
 transform = Transform( -0.354369, 0, -0.935106, 0, 1, 0, 0.935106, 0, -0.354369, 13.1276, 0, -27.4031 )
 
-[node name="Baum6" parent="." instance=ExtResource( 8 )]
+[node name="Baum6" parent="." instance=ExtResource( 9 )]
 transform = Transform( -0.0148275, 0, 0.848597, 0, 0.848726, 0, -0.848597, 0, -0.0148275, -16.3631, 4.00992, -24.8235 )
 
-[node name="Baum7" parent="." instance=ExtResource( 8 )]
+[node name="Baum7" parent="." instance=ExtResource( 9 )]
 transform = Transform( -0.710993, 0, 0.0162077, 0, 0.711177, 0, -0.0162077, 0, -0.710993, -12.2733, 1.42628, -37.0746 )
 
-[node name="Steine_001" parent="." instance=ExtResource( 9 )]
+[node name="Steine_001" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.30409, -0.00281119, -9.90881 )
 
-[node name="Steine_002" parent="." instance=ExtResource( 9 )]
+[node name="Steine_002" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.97464, -0.00281072, -13.5574 )
 
-[node name="Steine_003" parent="." instance=ExtResource( 9 )]
+[node name="Steine_003" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8919, -0.00281072, -16.6693 )
 
-[node name="Steine_006" parent="." instance=ExtResource( 9 )]
+[node name="Steine_006" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.92216, -0.00281072, -22.0327 )
 
-[node name="Steine_007" parent="." instance=ExtResource( 9 )]
+[node name="Steine_007" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.12326, -0.00281072, -25.2176 )
 
-[node name="Steine_008" parent="." instance=ExtResource( 9 )]
+[node name="Steine_008" parent="." instance=ExtResource( 10 )]
 transform = Transform( 0.828915, 0, -0.559375, 0, 1, 0, 0.559375, 0, 0.828915, -5.09513, -0.00281072, -25.6398 )
 
-[node name="Steine_009" parent="." instance=ExtResource( 9 )]
+[node name="Steine_009" parent="." instance=ExtResource( 10 )]
 transform = Transform( 0.828915, 0, -0.559375, 0, 1, 0, 0.559375, 0, 0.828915, -5.56782, -0.00281024, -34.2564 )
 
-[node name="Steine_010" parent="." instance=ExtResource( 9 )]
+[node name="Steine_010" parent="." instance=ExtResource( 10 )]
 transform = Transform( 0.828915, 0, -0.559375, 0, 1, 0, 0.559375, 0, 0.828915, 0.386711, -0.00281024, -46.7644 )
 
-[node name="Steine_011" parent="." instance=ExtResource( 9 )]
+[node name="Steine_011" parent="." instance=ExtResource( 10 )]
 transform = Transform( 0.828915, 0, -0.559375, 0, 1, 0, 0.559375, 0, 0.828915, 4.56154, -0.00281024, -40.6461 )
 
-[node name="Steine_012" parent="." instance=ExtResource( 9 )]
+[node name="Steine_012" parent="." instance=ExtResource( 10 )]
 transform = Transform( 0.828915, 0, -0.559375, 0, 1, 0, 0.559375, 0, 0.828915, 6.92645, -0.00281024, -33.9732 )
 
-[node name="Steine_004" parent="." instance=ExtResource( 9 )]
+[node name="Steine_004" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.83258, -0.00281072, -14.1121 )
 
-[node name="Steine_005" parent="." instance=ExtResource( 9 )]
+[node name="Steine_005" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.17589, -0.00281072, -6.44469 )
 
-[node name="Mauer" parent="." instance=ExtResource( 10 )]
+[node name="Mauer" parent="." instance=ExtResource( 11 )]
 transform = Transform( -0.684288, 0, -0.729212, 0, 1, 0, 0.729212, 0, -0.684288, -9.2939, -3.57628e-007, -27.863 )
 
-[node name="Mauer2" parent="." instance=ExtResource( 10 )]
+[node name="Mauer2" parent="." instance=ExtResource( 11 )]
 transform = Transform( 0.791568, 0, -0.611081, 0, 1, 0, 0.611081, 0, 0.791568, 8.72189, -3.57628e-007, -36.9352 )
 
-[node name="Zaun" parent="." instance=ExtResource( 11 )]
+[node name="Zaun" parent="." instance=ExtResource( 12 )]
 transform = Transform( 0.432977, 0, -0.901405, 0, 1, 0, 0.901405, 0, 0.432977, 9.92253, 0, -27.9221 )
 
-[node name="Zaun2" parent="." instance=ExtResource( 11 )]
+[node name="Zaun2" parent="." instance=ExtResource( 12 )]
 transform = Transform( -0.414135, 0, 0.910215, 0, 1, 0, -0.910215, 0, -0.414135, 10.8818, -4.76837e-007, -25.8141 )
 
-[node name="Zaun3" parent="." instance=ExtResource( 11 )]
+[node name="Zaun3" parent="." instance=ExtResource( 12 )]
 transform = Transform( 0.569619, 0, 0.821909, 0, 1, 0, -0.821909, 0, 0.569619, -10.9603, 0, -26.5431 )
 
-[node name="Felsen_007" parent="." instance=ExtResource( 12 )]
+[node name="Felsen_007" parent="." instance=ExtResource( 13 )]
 transform = Transform( -0.334296, 0, 0.942468, 0, 1, 0, -0.942468, 0, -0.334296, -16.3837, 0, -22.3872 )
 
-[node name="Felsen_008" parent="." instance=ExtResource( 12 )]
+[node name="Felsen_008" parent="." instance=ExtResource( 13 )]
 transform = Transform( 0.88903, 0, -0.457849, 0, 1, 0, 0.457849, 0, 0.88903, 13.1486, 0, -31.2778 )
 
-[node name="Felsen_020" parent="." instance=ExtResource( 12 )]
+[node name="Felsen_020" parent="." instance=ExtResource( 13 )]
 transform = Transform( 1.51149, 0, -0.778416, 0, 1.70016, 0, 0.778416, 0, 1.51149, 4.34658, -4.76837e-007, -46.8373 )
 
-[node name="Felsen_021" parent="." instance=ExtResource( 12 )]
+[node name="Felsen_021" parent="." instance=ExtResource( 13 )]
 transform = Transform( 0.287709, 0, -1.67564, 0, 1.70016, 0, 1.67564, 0, 0.287709, -4.27226, -9.53674e-007, -45.5718 )
 
-[node name="Felsen_022" parent="." instance=ExtResource( 13 )]
+[node name="Felsen_022" parent="." instance=ExtResource( 14 )]
 transform = Transform( 0.578343, 0, -0.584285, 0, 0.822113, 0, 0.584285, 0, 0.578343, 8.03311, 0, -44.0148 )
 
-[node name="Felsen_023" parent="." instance=ExtResource( 13 )]
+[node name="Felsen_023" parent="." instance=ExtResource( 14 )]
 transform = Transform( -0.565133, 0, -0.597071, 0, 0.822113, 0, 0.597071, 0, -0.565133, -9.62224, -9.53674e-007, -39.9079 )
 
-[node name="Felsen_024" parent="." instance=ExtResource( 13 )]
+[node name="Felsen_024" parent="." instance=ExtResource( 14 )]
 transform = Transform( -0.694491, 0, -0.439944, 0, 0.822113, 0, 0.439944, 0, -0.694491, 9.70409, -9.53674e-007, -5.01836 )
 
