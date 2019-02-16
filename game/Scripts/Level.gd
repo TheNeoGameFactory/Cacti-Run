@@ -18,12 +18,13 @@ func _ready():
 
 
 func _process(delta):
-	
+
 	# Show or Hide our Pausemenu with the Escape Key - Mapped in InputManager
-	if Input.is_action_just_pressed("Escape"):
-		togglePauseMenu = !togglePauseMenu
-		pauseMenu.visible = togglePauseMenu
-		get_tree().paused= togglePauseMenu;
+	if $PlayMenu/Restart_Pivot.visible == false:
+		if Input.is_action_just_pressed("Escape"):
+			togglePauseMenu = !togglePauseMenu
+			pauseMenu.visible = togglePauseMenu
+			get_tree().paused= togglePauseMenu;
 		
 func _togglePause():
 		togglePauseMenu = !togglePauseMenu

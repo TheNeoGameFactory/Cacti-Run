@@ -4,6 +4,10 @@ export (float) var playerSpeed = 4 setget _setPlayerSpeed, _getPlayerSpeed
 export (float) var followSpeed = 3 
 var movement = 0
 var touchscreenPressed = false
+var isGrounded = false
+onready var jumpTimer = $JumpTimer
+var isJumping = false
+var jumpSpeed = 1
 
 
 onready var playerRootNode = get_node("/root/LevelRoot/Level/PlayerRootNode")
@@ -13,7 +17,17 @@ onready var cameraNode = get_node("/root/LevelRoot/Camera")
 
 func _physics_process(delta):
 	
-	
+	if isGrounded:
+		if Input.is_action_just_pressed("Jump"):
+			jumpTimer.start()
+			isGrounded = false
+			isJumping = true
+			
+	if isJumping and !isGrounded:
+		jumpSpeed = 0.1*jumpTimer.time_left
+		
+	if !isJumping and !isGrounded:
+		jumpSpeed = 0.15*jumpTimer.time_left * -1
 	
 	if Input.is_action_pressed("Move_Left"):
 		movement = playerSpeed * -1
@@ -25,7 +39,7 @@ func _physics_process(delta):
 		print("Sliding")
 		
 	
-	self.translate(Vector3(movement*delta,0,0))
+	self.translate(Vector3(movement*delta,jumpSpeed,0))
 	
 	var distance = (playerRootNode.translation - self.translation)/1.25
 	var camera = get_node("/root/LevelRoot/Camera")
@@ -38,6 +52,14 @@ func _physics_process(delta):
 func _setPlayerSpeed(newValue):
 	playerSpeed = newValue
 	
+func _isGrounded(body):
+	if body.is_in_group("ground"):
+		isGrounded = true
+		jumpSpeed = 0
+		
+
+	
+		
 	
 func _getPlayerSpeed():
 	return playerSpeed
@@ -62,3 +84,8 @@ func _on_Area_body_entered(body):
 	if body.is_in_group("enemy") or body.is_in_group("environment"):
 		if body.is_visible_in_tree():	
 			$"/root/LevelRoot/PlayMenu"._gameOver()
+
+
+func _toogelJump():
+	isJumping = !isJumping
+	

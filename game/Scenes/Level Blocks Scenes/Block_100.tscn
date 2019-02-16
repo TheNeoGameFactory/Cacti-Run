@@ -10,3 +10,7 @@
 material/0 = ExtResource( 2 )
 material/1 = ExtResource( 3 )
 
+[node name="col" parent="Block_100" index="0" groups=[
+"environment",
+]]
+

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Cacti Run Theme.ogg-1fc9698761d42f98390bb001c64d68c8.oggstr"
+
+[deps]
+
+source_file="res://Music/Cacti Run Theme.ogg"
+dest_files=[ "res://.import/Cacti Run Theme.ogg-1fc9698761d42f98390bb001c64d68c8.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

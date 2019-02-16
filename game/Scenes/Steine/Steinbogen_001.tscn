@@ -5,8 +5,10 @@
 
 [node name="Steinbogen_001" instance=ExtResource( 1 )]
 
-[node name="Steinbogen001" parent="." index="0" groups=[
+[node name="Steinbogen001" parent="." index="0"]
+material/0 = ExtResource( 2 )
+
+[node name="col" parent="Steinbogen001" index="0" groups=[
 "environment",
 ]]
-material/0 = ExtResource( 2 )
 

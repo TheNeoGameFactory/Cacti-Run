@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/GenerateLevel.gd" type="Script" id=2]
@@ -11,12 +11,13 @@
 [ext_resource path="res://Scenes/Level Blocks Scenes/Block_50_04.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Player/Player-Kaktus.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Global Light.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Menu Scenes/PlayMenu.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scripts/DistanceScript.gd" type="Script" id=13]
-[ext_resource path="res://Scenes/Menu Scenes/FASTER Notification.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Models/LevelBlock/Boden.material" type="Material" id=15]
-[ext_resource path="res://Models/LevelBlock/Felsen.material" type="Material" id=16]
-[ext_resource path="res://Models/Steine/Felsen.material" type="Material" id=17]
+[ext_resource path="res://Scenes/Menu Scenes/FASTER Notification.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Menu Scenes/PlayMenu.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scripts/DistanceScript.gd" type="Script" id=14]
+[ext_resource path="res://Sound/faster.ogg" type="AudioStream" id=15]
+[ext_resource path="res://Models/LevelBlock/Boden.material" type="Material" id=16]
+[ext_resource path="res://Models/LevelBlock/Felsen.material" type="Material" id=17]
+[ext_resource path="res://Models/Steine/Felsen.material" type="Material" id=18]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -50,7 +51,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 6,
-"material": ExtResource( 15 ),
+"material": ExtResource( 16 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 4
@@ -62,7 +63,7 @@ surfaces/1 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 1464,
-"material": ExtResource( 16 ),
+"material": ExtResource( 17 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 941
@@ -92,23 +93,28 @@ environment = SubResource( 2 )
 
 [node name="Spatial" parent="." instance=ExtResource( 11 )]
 
-[node name="PlayMenu" parent="." instance=ExtResource( 12 )]
-script = ExtResource( 13 )
+[node name="FASTER Notification" parent="." instance=ExtResource( 12 )]
 
-[node name="FASTER Notification" parent="PlayMenu" instance=ExtResource( 14 )]
+[node name="Timer" type="Timer" parent="FASTER Notification"]
 
-[node name="Timer" type="Timer" parent="PlayMenu/FASTER Notification"]
+[node name="PlayMenu" parent="." instance=ExtResource( 13 )]
+script = ExtResource( 14 )
+
+[node name="FasterSound" type="AudioStreamPlayer" parent="PlayMenu"]
+stream = ExtResource( 15 )
+volume_db = 10.0
 
 [node name="Block_100" type="MeshInstance" parent="."]
-editor/display_folded = true
-transform = Transform( 9.75393, 0, 0, 0, 0.781141, 0, 0, 0, 4.20258, 0, 0, 0 )
+transform = Transform( 9.75393, 0, 0, 0, 0.781141, 0, 0, 0, 4.20258, 0, 0, 19.8965 )
 mesh = SubResource( 3 )
-material/0 = ExtResource( 15 )
-material/1 = ExtResource( 17 )
+material/0 = ExtResource( 16 )
+material/1 = ExtResource( 18 )
 
-[node name="col" type="StaticBody" parent="Block_100"]
+[node name="col" type="StaticBody" parent="Block_100" groups=[
+"ground",
+]]
 
 [node name="shape" type="CollisionShape" parent="Block_100/col"]
 shape = SubResource( 4 )
 
-[connection signal="timeout" from="PlayMenu/FASTER Notification/Timer" to="PlayMenu" method="_on_Timer_timeout"]
+[connection signal="timeout" from="FASTER Notification/Timer" to="PlayMenu" method="_on_Timer_timeout"]

@@ -4,7 +4,7 @@ extends Control
 onready var distanceText = $Distance_Pivot/TraveledDistance
 onready var speedMultiplier = $"/root/LevelRoot/Level"
 onready var playerSpeed = $"/root/LevelRoot/Level/PlayerRootNode/Player"
-onready var fasterMenu = $"FASTER Notification"
+onready var fasterMenu = $"/root/LevelRoot/FASTER Notification"
 var distance = 0
 var lastDistance = 300
 var notCollided = true
@@ -32,11 +32,14 @@ func _process(delta):
 		
 func _getFaster():
 	if distance > lastDistance:
+		$FasterSound.play()
 		fasterMenu.show()
-		$"FASTER Notification/Timer".start()
+		$"/root/LevelRoot/FASTER Notification/Timer".start()
 		lastDistance+=distance*1.3
 		speedMultiplier.fieldSpeedMultiplier+=0.15
 		playerSpeed.playerSpeed *= speedMultiplier.fieldSpeedMultiplier
+		if playerSpeed.playerSpeed > 9:
+			playerSpeed.playerSpeed = 9
 	pass
 	
 	
