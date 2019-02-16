@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/GenerateLevel.gd" type="Script" id=2]
@@ -10,15 +10,16 @@
 [ext_resource path="res://Scenes/Level Blocks Scenes/Block_50_03.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Level Blocks Scenes/Block_50_04.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Level Blocks Scenes/Block_wald.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/Player/Player-Kaktus.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Global Light.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/Menu Scenes/FASTER Notification.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scenes/Menu Scenes/PlayMenu.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scripts/DistanceScript.gd" type="Script" id=15]
-[ext_resource path="res://Sound/faster.ogg" type="AudioStream" id=16]
-[ext_resource path="res://Models/LevelBlock/Boden.material" type="Material" id=17]
-[ext_resource path="res://Models/LevelBlock/Felsen.material" type="Material" id=18]
-[ext_resource path="res://Models/Steine/Felsen.material" type="Material" id=19]
+[ext_resource path="res://Scenes/Level Blocks Scenes/Block_labyrinth.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Player/Player-Kaktus.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Global Light.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Menu Scenes/FASTER Notification.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Menu Scenes/PlayMenu.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scripts/DistanceScript.gd" type="Script" id=16]
+[ext_resource path="res://Sound/faster.ogg" type="AudioStream" id=17]
+[ext_resource path="res://Models/LevelBlock/Boden.material" type="Material" id=18]
+[ext_resource path="res://Models/LevelBlock/Felsen.material" type="Material" id=19]
+[ext_resource path="res://Models/Steine/Felsen.material" type="Material" id=20]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -52,7 +53,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 6,
-"material": ExtResource( 17 ),
+"material": ExtResource( 18 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 4
@@ -64,7 +65,7 @@ surfaces/1 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 1464,
-"material": ExtResource( 18 ),
+"material": ExtResource( 19 ),
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 941
@@ -82,8 +83,8 @@ script = ExtResource( 1 )
 pause_mode = 1
 script = ExtResource( 2 )
 fieldLength = 3
-walkableArea = [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ]
-playerScene = ExtResource( 11 )
+walkableArea = [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ]
+playerScene = ExtResource( 12 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.958015, 0.286718, 0, -0.286718, 0.958015, -0.00920916, 3.7855, 2.77412 )
@@ -92,24 +93,24 @@ far = 200.0
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 2 )
 
-[node name="Spatial" parent="." instance=ExtResource( 12 )]
+[node name="Spatial" parent="." instance=ExtResource( 13 )]
 
-[node name="FASTER Notification" parent="." instance=ExtResource( 13 )]
+[node name="FASTER Notification" parent="." instance=ExtResource( 14 )]
 
 [node name="Timer" type="Timer" parent="FASTER Notification"]
 
-[node name="PlayMenu" parent="." instance=ExtResource( 14 )]
-script = ExtResource( 15 )
+[node name="PlayMenu" parent="." instance=ExtResource( 15 )]
+script = ExtResource( 16 )
 
 [node name="FasterSound" type="AudioStreamPlayer" parent="PlayMenu"]
-stream = ExtResource( 16 )
+stream = ExtResource( 17 )
 volume_db = 10.0
 
 [node name="Block_100" type="MeshInstance" parent="."]
 transform = Transform( 9.75393, 0, 0, 0, 0.781141, 0, 0, 0, 4.20258, 0, 0, 19.8965 )
 mesh = SubResource( 3 )
-material/0 = ExtResource( 17 )
-material/1 = ExtResource( 19 )
+material/0 = ExtResource( 18 )
+material/1 = ExtResource( 20 )
 
 [node name="col" type="StaticBody" parent="Block_100" groups=[
 "ground",

@@ -161,7 +161,7 @@ transform = Transform( -0.371497, 0, 0.928434, 0, 1, 0, -0.928434, 0, -0.371497,
 transform = Transform( 0.844387, 0, 0.535733, 0, 1, 0, -0.535733, 0, 0.844387, 10.4104, 9.53674e-007, -56.5134 )
 
 [node name="Baum31" parent="." instance=ExtResource( 3 )]
-transform = Transform( 0.771419, 0, -0.636327, 0, 1, 0, 0.636327, 0, 0.771419, 6.29472, 9.53674e-007, -65.6662 )
+transform = Transform( 0.771419, 0, -0.636327, 0, 1, 0, 0.636327, 0, 0.771419, 7.35042, 9.53674e-007, -65.6662 )
 
 [node name="Baum33" parent="." instance=ExtResource( 3 )]
 transform = Transform( -0.790377, 0, -0.612621, 0, 1, 0, 0.612621, 0, -0.790377, 13.832, 9.53674e-007, -77.4566 )
@@ -211,9 +211,6 @@ spawnChance = 90
 [node name="Baum47" parent="." instance=ExtResource( 3 )]
 transform = Transform( 0.997881, 0, -0.0650696, 0, 1, 0, 0.0650696, 0, 0.997881, -5.07901, 1.90735e-006, -20.6615 )
 
-[node name="Baum4" parent="." instance=ExtResource( 3 )]
-transform = Transform( 0.711764, 0, -0.702419, 0, 1, 0, 0.702419, 0, 0.711764, -3.35967, 1.90735e-006, -33.9911 )
-
 [node name="Baum5" parent="." instance=ExtResource( 3 )]
 transform = Transform( -0.870708, 0, -0.491801, 0, 1, 0, 0.491801, 0, -0.870708, 11.6533, 1.90735e-006, -52.622 )
 spawnChance = 90
@@ -262,7 +259,7 @@ transform = Transform( 0.579582, 0, 0.814914, 0, 1, 0, -0.814914, 0, 0.579582, -
 transform = Transform( 0.738672, 0, 0.674065, 0, 1, 0, -0.674065, 0, 0.738672, 16.4363, 1.90735e-006, -71.4969 )
 
 [node name="Baum99" parent="." instance=ExtResource( 3 )]
-transform = Transform( 0.951532, 0, 0.30755, 0, 1, 0, -0.30755, 0, 0.951532, 2.794, 2.86102e-006, -71.2846 )
+transform = Transform( 0.951532, 0, 0.30755, 0, 1, 0, -0.30755, 0, 0.951532, 2.794, 2.86102e-006, -69.7283 )
 
 [node name="Baum103" parent="." instance=ExtResource( 3 )]
 transform = Transform( 0.145868, 0, -0.989304, 0, 1, 0, 0.989304, 0, 0.145868, 9.16507, 1.90735e-006, -76.2334 )
@@ -286,9 +283,6 @@ spawnChance = 90
 
 [node name="Baum101" parent="." instance=ExtResource( 3 )]
 transform = Transform( 0.995195, 0, 0.0979094, 0, 1, 0, -0.0979094, 0, 0.995195, -9.79093, 1.90735e-006, -67.4887 )
-
-[node name="Baum75" parent="." instance=ExtResource( 3 )]
-transform = Transform( 0.627062, 0, -0.778969, 0, 1, 0, 0.778969, 0, 0.627062, -2.87919, 1.90735e-006, -84.1543 )
 
 [node name="Baum117" parent="." instance=ExtResource( 3 )]
 transform = Transform( -0.775089, 0, 0.631852, 0, 1, 0, -0.631852, 0, -0.775089, -0.968001, 2.02656e-006, -97.7701 )
