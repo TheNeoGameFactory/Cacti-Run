@@ -253,7 +253,7 @@ transform = Transform( 0.909425, 0, 0.415868, 0, 1, 0, -0.415868, 0, 0.909425, -
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.62164, 0, 1.3502 )
 
 [node name="Felsen_005" parent="otherObject" instance=ExtResource( 14 )]
-transform = Transform( 0.956634, 0, 0.291293, 0, 1, 0, -0.291293, 0, 0.956634, -1.31474, 0, -3.89809 )
+transform = Transform( 0.956634, 0, 0.291293, 0, 1, 0, -0.291293, 0, 0.956634, 0.0541118, 0, -3.89773 )
 
 [node name="Felsen_002" parent="otherObject" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.35324, 0, 1.2724 )
@@ -314,43 +314,43 @@ transform = Transform( 1.02193, 0, 0.438275, 0, 1.11195, 0, -0.438275, 0, 1.0219
 transform = Transform( 0.64347, 0, 0.765471, 0, 1, 0, -0.765471, 0, 0.64347, -4.60073, 0, -16.9105 )
 
 [node name="Kaktus2" parent="." instance=ExtResource( 20 )]
-transform = Transform( 0.551874, 0, -0.833927, 0, 1, 0, 0.833927, 0, 0.551874, 8.09509, -2.38419e-007, -30.2958 )
+transform = Transform( 0.551874, 0, -0.833927, 0, 1, 0, 0.833927, 0, 0.551874, 8.09509, -2.38419e-07, -30.2958 )
 
 [node name="Kaktus6" parent="." instance=ExtResource( 20 )]
-transform = Transform( -0.0806701, 0, -0.996741, 0, 1, 0, 0.996741, 0, -0.0806701, -11.3634, -2.38419e-007, -56.1171 )
+transform = Transform( -0.0806701, 0, -0.996741, 0, 1, 0, 0.996741, 0, -0.0806701, -11.3634, -2.38419e-07, -56.1171 )
 
 [node name="Kaktus7" parent="." instance=ExtResource( 20 )]
-transform = Transform( -0.390819, 0, -0.920468, 0, 1, 0, 0.920468, 0, -0.390819, -10.5332, -2.38419e-007, -58.5061 )
+transform = Transform( -0.390819, 0, -0.920468, 0, 1, 0, 0.920468, 0, -0.390819, -10.5332, -2.38419e-07, -58.5061 )
 
 [node name="Kaktus8" parent="." instance=ExtResource( 20 )]
-transform = Transform( 0.621647, 0, -0.783297, 0, 1, 0, 0.783297, 0, 0.621647, 9.85344, -2.38419e-007, -68.4121 )
+transform = Transform( 0.621647, 0, -0.783297, 0, 1, 0, 0.783297, 0, 0.621647, 9.85344, -2.38419e-07, -68.4121 )
 
 [node name="Kaktus12" parent="." instance=ExtResource( 20 )]
-transform = Transform( -0.752294, 0, -0.658828, 0, 1, 0, 0.658828, 0, -0.752294, -7.44873, -2.38419e-007, -83.5006 )
+transform = Transform( -0.752294, 0, -0.658828, 0, 1, 0, 0.658828, 0, -0.752294, -7.44873, -2.38419e-07, -83.5006 )
 
 [node name="Kaktus13" parent="." instance=ExtResource( 20 )]
-transform = Transform( -0.312172, 0, -0.950025, 0, 1, 0, 0.950025, 0, -0.312172, -7.59852, -7.15256e-007, -78.3221 )
+transform = Transform( -0.312172, 0, -0.950025, 0, 1, 0, 0.950025, 0, -0.312172, -7.59852, -7.15256e-07, -78.3221 )
 
 [node name="Kaktus14" parent="." instance=ExtResource( 20 )]
-transform = Transform( -0.752294, 0, -0.658828, 0, 1, 0, 0.658828, 0, -0.752294, -7.38924, -2.38419e-007, -74.5613 )
+transform = Transform( -0.752294, 0, -0.658828, 0, 1, 0, 0.658828, 0, -0.752294, -7.38924, -2.38419e-07, -74.5613 )
 
 [node name="Kaktus11" parent="." instance=ExtResource( 20 )]
-transform = Transform( -0.390819, 0, -0.920468, 0, 1, 0, 0.920468, 0, -0.390819, -9.57537, -2.38419e-007, -62.2183 )
+transform = Transform( -0.390819, 0, -0.920468, 0, 1, 0, 0.920468, 0, -0.390819, -9.57537, -2.38419e-07, -62.2183 )
 
 [node name="Kaktus9" parent="." instance=ExtResource( 20 )]
-transform = Transform( -0.390819, 0, -0.920468, 0, 1, 0, 0.920468, 0, -0.390819, -10.1337, -2.38419e-007, -65.2296 )
+transform = Transform( -0.390819, 0, -0.920468, 0, 1, 0, 0.920468, 0, -0.390819, -10.1337, -2.38419e-07, -65.2296 )
 
 [node name="Kaktus10" parent="." instance=ExtResource( 20 )]
-transform = Transform( -0.390819, 0, -0.920468, 0, 1, 0, 0.920468, 0, -0.390819, -11.5227, -2.38419e-007, -52.9893 )
+transform = Transform( -0.390819, 0, -0.920468, 0, 1, 0, 0.920468, 0, -0.390819, -11.5227, -2.38419e-07, -52.9893 )
 
 [node name="Kaktus5" parent="." instance=ExtResource( 20 )]
-transform = Transform( -0.580346, 0, -0.81437, 0, 1, 0, 0.81437, 0, -0.580346, -7.62486, -2.38419e-007, -32.5479 )
+transform = Transform( -0.580346, 0, -0.81437, 0, 1, 0, 0.81437, 0, -0.580346, -7.62486, -2.38419e-07, -32.5479 )
 
 [node name="Kaktus3" parent="." instance=ExtResource( 20 )]
-transform = Transform( 0.761029, 0, 0.0580434, 0, 0.763239, 0, -0.0580434, 0, 0.761029, 8.47304, -2.38419e-007, -28.4167 )
+transform = Transform( 0.761029, 0, 0.0580434, 0, 0.763239, 0, -0.0580434, 0, 0.761029, 8.47304, -2.38419e-07, -28.4167 )
 
 [node name="Kaktus4" parent="." instance=ExtResource( 20 )]
-transform = Transform( -0.151413, 0, -0.74807, 0, 0.763239, 0, 0.74807, 0, -0.151413, 10.0217, -2.38419e-007, -30.4442 )
+transform = Transform( -0.151413, 0, -0.74807, 0, 0.763239, 0, 0.74807, 0, -0.151413, 10.0217, -2.38419e-07, -30.4442 )
 
 [connection signal="area_entered" from="AnimFelsen/Area" to="AnimFelsen/Area" method="_on_Area_area_entered"]
 [connection signal="body_entered" from="AnimFelsen/Area" to="AnimFelsen/Area" method="_on_Area_body_entered"]

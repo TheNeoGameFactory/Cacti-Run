@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scripts/MoveTurnBlocks.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Steine/Felsen_002.tscn" type="PackedScene" id=2]
@@ -15,6 +15,40 @@
 [ext_resource path="res://Scenes/Teile/Baum2.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Teile/Haeuschen.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Teile/Kaktus.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scripts/TriggerPlayAnimation.gd" type="Script" id=16]
+
+[sub_resource type="BoxShape" id=1]
+
+extents = Vector3( 9.77256, 5.28494, 1 )
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "runningCacteen"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Kaktus:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -2.06827, 9.53674e-07, -18.1242 ), Vector3( -2.06827, 9.53674e-07, -18.1242 ), Vector3( -7.21109, 9.53674e-07, -13.7018 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Kaktus:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, -31.0337, 0 ), Vector3( 0, -43.4389, 0 ), Vector3( 0, -35.5431, 0 ), Vector3( 0, -49.307, 0 ), Vector3( 0, -43.7426, 0 ), Vector3( 0, -51.9459, 0 ), Vector3( 0, -49.307, 0 ) ]
+}
 
 [node name="Block_50_01" type="Spatial"]
 script = ExtResource( 1 )
@@ -54,13 +88,14 @@ transform = Transform( 0.497112, 0, -3.19238, 0, 0.968188, 0, 1.04889, 0, -0.070
 script = ExtResource( 6 )
 
 [node name="Felsen_011" parent="." instance=ExtResource( 4 )]
+editor/display_folded = true
 transform = Transform( -0.805074, 0, -1.41193, 0, 1.30055, 0, 1.02142, 0, -1.11287, 5.01124, -0.0519099, -42.0676 )
 
 [node name="Felsen_004" parent="Felsen_011" instance=ExtResource( 5 )]
-transform = Transform( 0.744445, 0, 2.98023e-007, 0, 0.744445, 0, -2.98023e-008, 0, 0.744445, 11.9393, -0.166956, -8.04741 )
+transform = Transform( 0.744445, 0, 2.98023e-07, 0, 0.744445, 0, -2.98023e-08, 0, 0.744445, 11.9393, -0.166956, -8.04741 )
 
 [node name="Felsen_005" parent="Felsen_011" instance=ExtResource( 5 )]
-transform = Transform( 0.744445, 0, 4.17233e-007, 0, 0.744445, 0, -5.96046e-008, 0, 0.744445, 25.02, -0.166957, -5.54415 )
+transform = Transform( 0.744445, 0, 4.17233e-07, 0, 0.744445, 0, -5.96046e-08, 0, 0.744445, 25.02, -0.166957, -5.54415 )
 
 [node name="Felsen_006" parent="Felsen_011" instance=ExtResource( 5 )]
 transform = Transform( 0.733064, 0, 0.179259, 0, 0.50734, 0, -0.0938123, 0, 0.733064, 6.22147, -0.166957, -2.41997 )
@@ -72,13 +107,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.257685, -0.0233469, 0.30669
 transform = Transform( 0.745246, 0, 0.0728199, 0, 0.832658, 0, -0.0809755, 0, 0.828712, -1.85465, 0, -21.9288 )
 
 [node name="Cliff_009" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.38232, 7.50381, 1.90735e-006, -45.4299 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.38232, 7.50381, 1.90735e-06, -45.4299 )
 
 [node name="Cliff_005" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.254, 0, -18.4002 )
 
 [node name="Cliff_008" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1.12627, 0, -0.722497, 0, 1, 0, 0.722497, 0, 1.12627, -9.39627, 9.53674e-007, -46.6924 )
+transform = Transform( 1.12627, 0, -0.722497, 0, 1, 0, 0.722497, 0, 1.12627, -9.39627, 9.53674e-07, -46.6924 )
 
 [node name="Cliff_006" parent="." instance=ExtResource( 8 )]
 transform = Transform( -0.833647, 0, -0.552298, 0, 1, 0, 0.552298, 0, -0.833647, -13.7499, 0, -24.6629 )
@@ -87,10 +122,10 @@ transform = Transform( -0.833647, 0, -0.552298, 0, 1, 0, 0.552298, 0, -0.833647,
 transform = Transform( 0.364462, 0, -0.931218, 0, 1, 0, 0.931218, 0, 0.364462, -8.1135, 0, -7.18436 )
 
 [node name="Cliff_007" parent="." instance=ExtResource( 9 )]
-transform = Transform( 0.182574, 0, 0.983192, 0, 1, 0, -0.983192, 0, 0.182574, -13.5563, 1.90735e-006, -33.9534 )
+transform = Transform( 0.182574, 0, 0.983192, 0, 1, 0, -0.983192, 0, 0.182574, -13.5563, 1.90735e-06, -33.9534 )
 
 [node name="Cliff_004" parent="." instance=ExtResource( 9 )]
-transform = Transform( 0.0795245, 0, -0.996833, 0, 1, 0, 0.996833, 0, 0.0795245, 5.29705, -9.53674e-007, -33.3732 )
+transform = Transform( 0.0795245, 0, -0.996833, 0, 1, 0, 0.996833, 0, 0.0795245, 5.29705, -9.53674e-07, -33.3732 )
 
 [node name="Cliff_003" parent="." instance=ExtResource( 9 )]
 transform = Transform( -0.29705, 0, -0.954862, 0, 1, 0, 0.954862, 0, -0.29705, 8.33575, 0, -7.26676 )
@@ -134,26 +169,46 @@ transform = Transform( -1.01095, 0, -0.813262, 0, 1.29747, 0, 0.813262, 0, -1.01
 transform = Transform( 0.570472, 0, -0.821317, 0, 1, 0, 0.821317, 0, 0.570472, -4.39382, 0, -8.6842 )
 
 [node name="Baum3" parent="." instance=ExtResource( 13 )]
-transform = Transform( 0.570472, 0, -0.821317, 0, 1, 0, 0.821317, 0, 0.570472, 6.61709, 4.76837e-007, -13.9786 )
+transform = Transform( 0.570472, 0, -0.821317, 0, 1, 0, 0.821317, 0, 0.570472, 6.61709, 4.76837e-07, -13.9786 )
 
 [node name="Baum4" parent="." instance=ExtResource( 13 )]
-transform = Transform( -0.268111, 0, -0.963388, 0, 1, 0, 0.963388, 0, -0.268111, -8.34561, 9.53674e-007, -17.7063 )
+transform = Transform( -0.268111, 0, -0.963388, 0, 1, 0, 0.963388, 0, -0.268111, -8.34561, 9.53674e-07, -17.7063 )
 
 [node name="Baum5" parent="." instance=ExtResource( 13 )]
-transform = Transform( 0.826968, 0, 0.562248, 0, 1, 0, -0.562248, 0, 0.826968, -10.7212, 9.53674e-007, -29.9994 )
+transform = Transform( 0.826968, 0, 0.562248, 0, 1, 0, -0.562248, 0, 0.826968, -10.7212, 9.53674e-07, -29.9994 )
 
 [node name="Baum6" parent="." instance=ExtResource( 13 )]
-transform = Transform( 0.65516, 0, -0.75549, 0, 1, 0, 0.75549, 0, 0.65516, 3.30429, 4.76837e-007, -46.5712 )
+transform = Transform( 0.65516, 0, -0.75549, 0, 1, 0, 0.75549, 0, 0.65516, 3.30429, 4.76837e-07, -46.5712 )
 
 [node name="Haeuschen" parent="." instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90426, 4.8961, -21.4836 )
 
-[node name="Kaktus" parent="." instance=ExtResource( 15 )]
-transform = Transform( 0.856864, 0, -0.515542, 0, 1, 0, 0.515542, 0, 0.856864, -2.06827, 9.53674e-007, -18.1242 )
-
 [node name="Kaktus2" parent="." instance=ExtResource( 15 )]
-transform = Transform( 0.0685996, 0, 0.997644, 0, 1, 0, -0.997644, 0, 0.0685996, -7.78076, 9.53674e-007, -35.3116 )
+transform = Transform( 0.0685996, 0, 0.997644, 0, 1, 0, -0.997644, 0, 0.0685996, -7.78076, 9.53674e-07, -35.3116 )
 
 [node name="Kaktus3" parent="." instance=ExtResource( 15 )]
 transform = Transform( -0.612578, 0, 0.79041, 0, 1, 0, -0.79041, 0, -0.612578, 0.627609, -0.00564575, -36.1952 )
+
+[node name="runningCacteen" type="Spatial" parent="."]
+
+[node name="Kaktus" parent="runningCacteen" instance=ExtResource( 15 )]
+transform = Transform( 0.856864, 0, -0.515542, 0, 1, 0, 0.515542, 0, 0.856864, -2.06827, 9.53674e-07, -18.1242 )
+spawnChance = 60
+
+[node name="random" type="Spatial" parent="runningCacteen"]
+script = ExtResource( 3 )
+spawnChance = 50
+
+[node name="Area" type="Area" parent="runningCacteen/random"]
+transform = Transform( 0.984657, 0, 0.174499, 0, 1, 0, -0.174499, 0, 0.984657, 0, 0, -7.15991 )
+script = ExtResource( 16 )
+animationPlayer = NodePath("../../runningCacteenAnim")
+startAnimationName = "runningCacteen"
+
+[node name="CollisionShape" type="CollisionShape" parent="runningCacteen/random/Area"]
+transform = Transform( 0.974193, 0, -0.225717, 0, 1, 0, 0.225717, 0, 0.974193, -1.76105, 0, 16.212 )
+shape = SubResource( 1 )
+
+[node name="runningCacteenAnim" type="AnimationPlayer" parent="runningCacteen"]
+anims/runningCacteen = SubResource( 2 )
 
