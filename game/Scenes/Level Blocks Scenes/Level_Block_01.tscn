@@ -15,7 +15,7 @@
 [ext_resource path="res://Scenes/Teile/Baum1.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Steine/Steine_002.tscn" type="PackedScene" id=14]
 
-[node name="Level_Block_01" index="0" instance=ExtResource( 1 )]
+[node name="Level_Block_01" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 blockOffset = 100
 
@@ -23,13 +23,13 @@ blockOffset = 100
 transform = Transform( 0.750166, 0, 0.661249, 0, 1, 0, -0.661249, 0, 0.750166, -4.10512, 0, -14.3366 )
 
 [node name="Baum3" parent="." index="1" instance=ExtResource( 3 )]
-transform = Transform( 0.593245, 0, -0.805022, 0, 1, 0, 0.805022, 0, 0.593245, 8.21622, -1.43051e-006, -36.9665 )
+transform = Transform( 0.593245, 0, -0.805022, 0, 1, 0, 0.805022, 0, 0.593245, 8.21622, -1.43051e-06, -36.9665 )
 
 [node name="Baum4" parent="." index="2" instance=ExtResource( 3 )]
-transform = Transform( -0.322426, 0, 0.946595, 0, 1, 0, -0.946595, 0, -0.322426, 7.50123, -2.86102e-006, -42.39 )
+transform = Transform( -0.322426, 0, 0.946595, 0, 1, 0, -0.946595, 0, -0.322426, 7.50123, -2.86102e-06, -42.39 )
 
 [node name="Baum5" parent="." index="3" instance=ExtResource( 3 )]
-transform = Transform( -0.949752, 0, -0.313003, 0, 1, 0, 0.313003, 0, -0.949752, -2.98978, -1.90735e-006, -54.9861 )
+transform = Transform( -0.949752, 0, -0.313003, 0, 1, 0, 0.313003, 0, -0.949752, -2.98978, -1.90735e-06, -54.9861 )
 
 [node name="LevelBlock000" parent="." index="4"]
 editor/display_folded = true
@@ -58,10 +58,10 @@ script = ExtResource( 7 )
 spawnChance = 37
 
 [node name="Felsen_004" parent="." index="9" instance=ExtResource( 9 )]
-transform = Transform( -1.31595, 0, -2.15394, 0, 1.87103, 0, 1.59663, 0, -0.975459, 7.74017, 1.90735e-006, -13.6677 )
+transform = Transform( -1.31595, 0, -2.15394, 0, 1.87103, 0, 1.59663, 0, -0.975459, 7.74017, 1.90735e-06, -13.6677 )
 
 [node name="Felsen_006" parent="." index="10" instance=ExtResource( 9 )]
-transform = Transform( -1.31595, 0, -2.15394, 0, 1.87103, 0, 1.59663, 0, -0.975459, -5.83877, 2.86102e-006, -39.8181 )
+transform = Transform( -1.31595, 0, -2.15394, 0, 1.87103, 0, 1.59663, 0, -0.975459, -5.83877, 2.86102e-06, -39.8181 )
 
 [node name="Felsen_007" parent="." index="11" instance=ExtResource( 8 )]
 transform = Transform( -0.0712488, 0, -0.997459, 0, 1, 0, 0.997459, 0, -0.0712488, 0.391096, 0, -21.201 )

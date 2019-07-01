@@ -123,6 +123,7 @@ Sliding={
 [physics]
 
 common/physics_fps=120
+3d/physics_engine="GodotPhysics"
 
 [rendering]
 

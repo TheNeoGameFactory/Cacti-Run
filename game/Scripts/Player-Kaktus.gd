@@ -89,3 +89,7 @@ func _on_Area_body_entered(body):
 func _toogelJump():
 	isJumping = !isJumping
 	
+
+
+func _on_Area_area_entered():
+	pass # Replace with function body.
