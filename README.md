@@ -35,4 +35,4 @@ Everytime we played the animation the model scaled up. We used glTF as model for
 Maybe we made something wrong, or Godot has some problems with it, because other games work with Animations. We don't know.
 
 
-[![Cacti Run Menu Screenshot](/image.png)]
+[![Cacti Run Menu Screenshot](/image.png)](https://the-neo-gamefactory.itch.io/cacti-run-project-for-godot-wild-jam-6)
