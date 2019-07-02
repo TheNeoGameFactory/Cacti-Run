@@ -31,7 +31,7 @@ That's why we decided to make a 3D game with Godot.
 
 Yeah we had some trouble with some parts of the game.
 If you already played the game you can see that there is no animations.
-Everytime we played the animation the model scaled up. We used glTF as model format.
+Everytime we played a animation the model scaled up. We used glTF as model format.
 Maybe we made something wrong, or Godot has some problems with it, because other games work with Animations. We don't know.
 
 
