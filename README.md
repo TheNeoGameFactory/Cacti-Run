@@ -14,7 +14,7 @@ This is simple :D there was only two Persons on this project.
   ### Maurehago
   Maurehago made all Models for the Game, also he designed the single Level blocks that appears randomly in the game.
   
-  ## The Neo GameFactory
+  ### The Neo GameFactory
   The Neo GameFactory also known as KillerFliege made all Scripts for the Game in GDScript.
   
   
