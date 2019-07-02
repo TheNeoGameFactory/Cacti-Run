@@ -1,6 +1,6 @@
 # Cacti-Run - Godot Project Source Code
 
-**This game was made for the [Godot Wild Jam #6](https://itch.io/jam/godot-wild-jam-6) because of the Stable Release of _Godot 3.1_**
+**This game was made for the [Godot Wild Jam #6](https://itch.io/jam/godot-wild-jam-6) because of the Stable Release of _Godot 3.1._**
 _Cacti Run_ is a endless runner game where a Cactus must run and jump over obstacles.
 **Godot Wild Jam #6** Theme was _Out of Place Cacti_
 
