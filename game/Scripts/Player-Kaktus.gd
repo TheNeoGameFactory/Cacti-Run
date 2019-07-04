@@ -91,5 +91,4 @@ func _toogelJump():
 	
 
 
-func _on_Area_area_entered():
-	pass # Replace with function body.
+

@@ -1,14 +1,14 @@
 extends Spatial
 
-# Spawn Chance von 0 bis 100
+# Spawn Chance from 0 to 100
 export (int, 0, 100) var spawnChance = 50
 
 func _ready():
-	# ausblenden
+	# hide
 	self.hide()
 	randomize()
 
-	# Zufallszahl generiern
+	# generate random number
 	var rand = randi() %101
 
 	# Spawnen

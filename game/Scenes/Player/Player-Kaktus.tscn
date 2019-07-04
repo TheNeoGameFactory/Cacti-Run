@@ -61,7 +61,6 @@ shape = SubResource( 3 )
 [node name="JumpTimer" type="Timer" parent="." index="4"]
 wait_time = 0.5
 
-[connection signal="area_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_entered" from="Area2" to="." method="_isGrounded"]
 [connection signal="timeout" from="JumpTimer" to="." method="_toogelJump"]
