@@ -34,5 +34,4 @@ If you already played the game you can see that there is no animations.
 Everytime we played a animation the model scaled up. We used glTF as model format.
 Maybe we made something wrong, or Godot has some problems with it, because other games work with Animations. We don't know.
 
-
 [![Cacti Run Menu Screenshot](/image.png)](https://the-neo-gamefactory.itch.io/cacti-run-project-for-godot-wild-jam-6)
